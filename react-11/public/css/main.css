@@ -4,3 +4,25 @@
 * {
 	box-sizing: border-box;
 }
+
+body {
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+.logo{}
+
+.navbar-menu ul{
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
