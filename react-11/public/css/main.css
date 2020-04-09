@@ -73,7 +73,13 @@ header {
 	color: #fff;
     font-weight: bold;
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
+
+.navbar-menu li :hover{
+	color: #e4bb23;
+}
+
 .navbar-menu li {
 	margin: 0 25px;
 }
@@ -115,10 +121,18 @@ header {
 }
 
 .movie-genre a {
-	padding-right: 15px;
 	color: white;
     text-transform: uppercase;
 	font-weight: 100;
+	transition: all 0.2s ease-in-out;
+}
+
+.movie-genre li {
+	padding-right: 15px;
+}
+
+.movie-genre li :hover {
+	color: #e4bb23;
 }
 
 .trailer-button {
@@ -133,7 +147,13 @@ header {
 	font-weight: 100;
 	font-size: 15px;
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
+
+.trailer-button :hover {
+	background-color: #bc9a1d;
+}
+
 .trailer-button i {
 	font-size: 1.5em;
 	position: absolute;
@@ -182,5 +202,149 @@ header {
 	box-shadow: inset 0 -1px 0 #e4bb23;
 }
 
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 20px 0;
+	margin: 0 10px;
+}
 
+.card {
+	background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 24%;
+}
 
+.card:hover .play-movie {
+	visibility: visible;
+	opacity: 1;
+}
+
+.card-header{
+	margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-header img {
+	height: auto;
+	width: 100%;
+}
+
+.play-movie{
+	align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 80px 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+.play-movie h3 {
+	color: #e4bb23;
+    font-size: 2em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.play-movie i {
+	color: #fff;
+    font-size: 5em;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-info {
+	width: 100%;
+	padding: 10px;
+}
+
+.card-info h3 {
+	font-weight: 700;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.card-movie-genres {
+	display: flex;
+	margin: 5px 0;	
+	padding: 0;
+	color: #e4bb23;
+	font-weight: 100;
+}
+
+.li-card-movie-genres :hover {
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.movie-points {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	margin: 0;
+}
+
+.card-heart {
+	color: #ccc;
+	cursor: pointer;
+}
+
+.card-heart :hover {
+	color: #e74c3c;
+}
+
+.card-play-movie :hover {
+	color: #e4bb23;
+}
+
+footer {
+	width: 100%;
+	background-color: white;
+	padding: 20px 0;
+}
+
+footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contacts li{
+	margin: 0 20px;	
+}
+
+.contacts li a {
+	font-size: 25px;
+	color: #bababa;
+	transition: all 0.2s ease-in-out;
+}
+
+.twitter :hover{
+	color: #55acee;
+}
+
+.facebook :hover{
+	color: #3b5998;
+}
+
+.instagram :hover {
+	color: #e95950;
+}

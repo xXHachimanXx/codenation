@@ -53,13 +53,13 @@
 
 				<div class="header-footer">
 					<p>Nos Cinemas</p>
-					<p style="color: #e4bb23;">15 de Outubro de 2015 (Brasil)</p>
+					<p style="color: #e4bb23; ">15 de Outubro de 2015 (Brasil)</p>
 				</div>
 			</div>
 		</div>
 	</header>
-	
-	<section class="catalog">
+
+	<main class="catalog">
 
 		<nav class="catalog-menu">
 			<div class="container">
@@ -73,45 +73,55 @@
 			</div>
 		</nav>
 
-
 		<div class="container">
 
-			<div class="cards">
-				<section class="card">
+			<ul class="cards">
+				<li class="card">
 					<div class="card-header">
 						<img src="./img/poster-moonlight.jpg" alt="MOONLIGHT">
+						<div class="play-movie">
+							<h3>Moolight</h3>
+							<a href="#" class="card-play-movie">
+								<i class="fa fa-play" aria-hidden="true"></i>
+							</a>
+						</div>
 					</div>
 
-					<div class="card-body">
-						<h3>MOONLIGHT</h3>
-						<a href="#">Drama</a>
-					</div>
+					<div class="card-info">
+						<h3 class="card-movie-title">MOONLIGHT</h3>
+						<ul class="card-movie-genres">
+							<li class="li-card-movie-genres">
+								<a href="#" class="card-movie-genres">Drama</a>
+							</li>
+						</ul>
 
-					<div class="card-footer">
-						<a href="#"> <i class="fa fa-heart" aria-hidden="true"></i> </a>
-						<p>7.0</p>
+						<p class="movie-points">
+							<a href="#" class="card-heart"> <i class="fa fa-heart" aria-hidden="true"></i> </a>
+							7.0
+						</p>
 					</div>
-				</section>
-			</div>
+				</li>
+			</ul>
 		</div>
-	</section>
+
+	</main>
 
 	<footer>
-		<div class="logo">
+		<div class="container">
 			<img src="./img/logo-imdb.jpg" alt="LOGO">
-		</div>
 
-		<ul class="contacts">
-			<li>
-				<a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
-			</li>
-			<li>
-				<a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>
-			</li>
-			<li>
-				<a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
-			</li>
-		</ul>
+			<ul class="contacts">
+				<li class="contact-twitter">
+					<a href="#" class="twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+				</li>
+				<li class="contact-facebook">
+					<a href="#" class="facebook"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>
+				</li>
+				<li class="contact-instagram">
+					<a href="#" class="instagram"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+				</li>
+			</ul>
+		</div>
 	</footer>
 
 </body>
