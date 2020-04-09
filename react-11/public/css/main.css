@@ -59,7 +59,7 @@ header {
 	position: relative;
 	width: 960px;
 	margin: 0 auto;
-	z-index: 1;
+	z-index: 2;
 }
 
 .navbar {	
@@ -150,7 +150,7 @@ header {
 	transition: all 0.2s ease-in-out;
 }
 
-.trailer-button :hover {
+.div-trailer-button :hover {
 	background-color: #bc9a1d;
 }
 
@@ -196,6 +196,7 @@ header {
 	color: #e4bb23;
 	display: inline-block;
 	padding: 25px 0;
+	transition: all 0.2s ease-in-out;
 }
 
 .container .ul-menu-catalog a:hover {
