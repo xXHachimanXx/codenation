@@ -27,8 +27,23 @@ header {
 	height: 90vh;
     padding: 20px;
     position: relative;
-    width: 100%;
+	width: 100%;	
 }
+
+.header::after {
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.6) 0%,
+		rgba(0, 212, 255, 0) 75%
+	);
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
 
 a {
 	text-decoration: none;
@@ -39,6 +54,7 @@ a {
 	position: relative;
 	width: 960px;
 	margin: 0 auto;
+	z-index: 2;
 }
 
 .navbar {	
@@ -84,9 +100,16 @@ a {
 }
 /* Fim da Barra de navegação */
 
+#movie-title {
+	color: white;
+	font-size: 5em;
+	font-weight: bold;
+    line-height: 1.2em;
+	margin: 0;
+	text-transform: uppercase;
+}
 
-
-.film-genre {
+.movie-genre {
 	list-style: none;
 	display: flex;
 	align-items: center;
@@ -94,6 +117,37 @@ a {
 	margin: 15px 0 30px 0;
 }
 
-.film-genre li {
+.movie-genre a {
 	padding-right: 15px;
+	color: white;
+    text-transform: uppercase;
+	font-weight: 100;
+}
+
+.trailer-button {
+	padding: 15px 50px;
+	position: relative;
+	align-items: center;
+	display: inline-block;
+	color: black;
+	background-color: #e4bb23;
+	border-radius: 40px;
+	text-decoration: none;
+	font-weight: 100;
+	font-size: 15px;
+	cursor: pointer;
+}
+.trailer-button i {
+	font-size: 1.5em;
+	position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.header-footer {
+	padding: 20px 0;
+    font-size: 1.4em;
+	color: white;
+	font-weight: 100;
+	font-size: 14px;	
 }
