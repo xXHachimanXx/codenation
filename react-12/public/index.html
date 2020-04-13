@@ -1,17 +1,85 @@
 <!DOCTYPE html>
 <html class="no-js" lang="pt-br">
-	<head>
-		<meta charset="utf-8" />
-		<title>Instagram Codenation</title>
-		<meta name="description" content="" />
-		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" href="css/fontawesome.min.css" />
-		<link rel="stylesheet" href="css/main.css" />
-	</head>
-	<body>
+<head>
+	<meta charset="utf-8" />
+	<title>Instagram Codenation</title>
+	<meta name="description" content="" />
+	<link rel="shortcut icon" type="image/png" href="./favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	</body>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/fontawesome.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<nav class="header__navbar">
+				<img class="header__logo" src="./img/instagram-logo.svg" alt="INSTAGRAM">
+				<i class="far fa-paper-plane"></i>
+			</nav>
+		</div>
+	</header>
+
+	<section class="stories">
+		<div class="container">
+			<ul class="stories__list">
+				<li class="user__stories"></li>
+				<li class="user__stories"></li>
+				<li class="user__stories"></li>
+			</ul>
+		</div>
+	</section>
+
+	<main class="feed">
+		<div class="container">
+
+			<section class="feed__post">
+				<div class="post__header">
+					<div class="post__userName">
+						<img src="./img/profiles/gamora/gamora-profile.jpg">
+						<p>Gamora</p>
+					</div>
+
+					<div class="post__settings">
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+				</div>
+
+				<div class="post__content">
+					<img src="./img/profiles/gamora/gamora-1.jpg" alt="GAMORA POST">
+
+					<div class="post__actions">
+						<div class="actions__loveAndComment">
+							<button class="action__like">
+								<i class="far fa-heart"></i>
+							</button>
+
+							<button class="action__comment">
+								<i class="far fa-comment"></i>
+							</button>
+						</div>
+
+						<div class="actions__bookmark">
+							<button class="action__comment">
+								<i class="far fa-bookmark"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="post__info">
+					<img src="./img/profiles/carol/carol-profile.jpg" alt="">
+					<p class="info__likeBy">
+						Curtido por <b>Carol Danvers</b> e outras <b>7 pessoas</b>
+					</p>
+				</div>
+			</section>
+
+		</div>
+	</main>
+</body>
+
 </html>
