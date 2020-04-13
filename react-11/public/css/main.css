@@ -27,7 +27,7 @@ header {
 	padding: 20px;
 	justify-content: space-between;
 	background-attachment: fixed;
-	background-image: url(../img/capa-madmax2.jpg);
+	background-image: url(../img/deadpool.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
@@ -35,8 +35,7 @@ header {
 	height: 90vh;
     padding: 20px;
     position: relative;
-	width: 100%;
-		
+	width: 100%;	
 }
 
 .header::after {
@@ -65,7 +64,7 @@ header {
 .navbar {	
 	display: flex;
 	justify-content: space-between;
-	align-items: center;		
+	align-items: center;	
 }
 
 
