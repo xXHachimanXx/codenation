@@ -16,6 +16,7 @@ body {
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
 button {
@@ -177,7 +178,7 @@ button {
 	align-items: center;
 	text-decoration: none;
 	justify-content: flex-start;
-	padding: 5px;		
+	padding: 10px 5px;
 }
 .post__action {
 	display: flex;
@@ -196,6 +197,7 @@ button {
 	background-color: rgba(0, 0, 0, 0.05);	
 	display: flex;
 	align-items: center;
+	padding: 2px;
 	justify-content: flex-start;
 	font-weight: 400;	
 	font-size: 12px;
