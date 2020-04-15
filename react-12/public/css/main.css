@@ -118,6 +118,7 @@ button {
 }
 
 .feed__post {
+	margin: 20px 0;
 	background-color: white;
 	border: 1px solid rgba(0, 0, 0, .1);
 	border-radius: 10px;
@@ -189,4 +190,22 @@ button {
 	justify-self: flex-end;
 	margin-left: auto;
 	margin-right: 5px;
+}
+
+.post__info {
+	background-color: rgba(0, 0, 0, 0.05);	
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-weight: 400;	
+	font-size: 12px;
+}
+.post__info p{
+	margin: 12px 0;
+}
+.post__info .user__image {
+	display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
 }
