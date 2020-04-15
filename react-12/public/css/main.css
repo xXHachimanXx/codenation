@@ -11,6 +11,7 @@ body {
 	padding-top: 71px;
 	font-size: 10px;
 	font-family: 'Open Sans', sans-serif;
+	width: 100%;
 }
 
 a {
@@ -25,16 +26,14 @@ button {
 }
 
 .container {
-	width: 728px;
-	margin: 0 auto;	
+	width: 100%;
+	margin: 0 auto;
 }
-
 @media screen and (min-width: 728px) {
 	.container {
-		width: 728px;
+		width: 728px;		
 	}
 }
-
 
 .header {
 	display: flex;
@@ -72,14 +71,14 @@ button {
 
 
 .stories {
-	padding: 8px 0;
-	width: 100%;	
+	padding: 8px 0;	
 	align-items: center;
 	overflow-x: hidden;
     overflow-y: auto;
 }
 .stories__list {
 	height: 100%;
+	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	width: 728px;
@@ -112,15 +111,10 @@ button {
 
 
 .feed {
-	padding: 20px 0;
+	padding: 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-@media screen and (min-width: 728px) {
-	.feed {
-		padding: 16px 0;
-	}
 }
 
 .feed__post {
