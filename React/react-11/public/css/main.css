@@ -1,0 +1,350 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+a, li{
+	text-decoration: none;
+}
+
+body {
+    background-color: #f2f2f2;
+	font-family: "Montserrat", sans-serif;	
+	font-size: 13px;
+	font-weight: 700;
+	text-size-adjust: 100%;
+}
+
+header {
+	padding: 20px;
+	justify-content: space-between;
+	background-attachment: fixed;
+	background-image: url(../img/deadpool.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+    padding: 20px;
+    position: relative;
+	width: 100%;	
+}
+
+.header::after {
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.6) 0%,
+		rgba(0, 212, 255, 0) 75%
+	);
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+
+/* HEADER */
+.container {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	z-index: 2;
+}
+
+.navbar {	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+
+.navbar-menu a {
+	color: #fff;
+    font-weight: bold;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.navbar-menu li :hover{
+	color: #e4bb23;
+}
+
+.navbar-menu li {
+	margin: 0 25px;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+}
+.user img {
+	border-radius: 100%;
+	height: 45px;
+	width: 45px;
+	margin-right: 15px;
+	overflow: hidden;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.user p {
+	color: #fff;
+    font-weight: bold;
+}
+/* Fim da Barra de navegação */
+
+#movie-title {
+	color: white;
+	font-size: 5em;
+	font-weight: bold;
+    line-height: 1.2em;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.movie-genre {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin: 15px 0 30px 0;
+}
+
+.movie-genre a {
+	color: white;
+    text-transform: uppercase;
+	font-weight: 100;
+	transition: all 0.2s ease-in-out;
+}
+
+.movie-genre li {
+	padding-right: 15px;
+}
+
+.movie-genre li :hover {
+	color: #e4bb23;
+}
+
+.trailer-button {
+	padding: 15px 45px;
+	position: relative;
+	align-items: center;
+	display: inline-block;
+	color: black;
+	background-color: #e4bb23;
+	border-radius: 40px;
+	text-decoration: none;
+	font-weight: 100;
+	font-size: 15px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.div-trailer-button :hover {
+	background-color: #bc9a1d;
+}
+
+.trailer-button i {
+	font-size: 1.5em;
+	position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.header-footer {
+	padding: 20px 0;
+    font-size: 1.4em;
+	color: white;
+	font-weight: 100;
+	font-size: 14px;	
+}
+
+/* FIM HEADER */
+
+.catalog {
+	width: 100%;
+	background-color: #f2f2f2;
+}
+
+.catalog-menu {
+	width: 100%;	
+}
+
+.container .ul-menu-catalog {	
+	align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    justify-content: center;    
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container .ul-menu-catalog li {
+	margin: 0 20px;	
+}
+
+.container .ul-menu-catalog a {
+	color: #e4bb23;
+	display: inline-block;
+	padding: 25px 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.container .ul-menu-catalog a:hover {
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+	padding: 20px 0;
+}
+
+.card {
+	background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+	margin-bottom: 30px;	
+    overflow: hidden;
+    width: 24%;
+}
+
+.card:hover .play-movie {
+	visibility: visible;
+	opacity: 1;
+}
+
+.card-header{
+	margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-header img {
+	height: auto;
+	width: 100%;
+}
+
+.play-movie{
+	align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 80px 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+.play-movie h3 {
+	color: #e4bb23;
+    font-size: 1.5em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.play-movie i {
+	color: #fff;
+    font-size: 4em;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-info {
+	width: 100%;
+	padding: 10px;
+}
+
+.card-info h3 {
+	font-weight: 700;
+	font-size: 13px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.card-movie-genres {
+	font-size: 12px;
+	margin: 10px 0;	
+	padding: 0;
+	color: #e4bb23;
+	font-weight: 100;
+}
+
+.li-card-movie-genres :hover {
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.movie-points {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	margin: 0;
+}
+
+.card-heart {
+	color: #ccc;
+	cursor: pointer;
+}
+
+.card-heart :hover {
+	color: #e74c3c;
+}
+
+.card-play-movie :hover {
+	color: #e4bb23;
+}
+
+footer {
+	width: 100%;
+	background-color: white;
+	padding: 20px 0;
+}
+
+footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contacts li{
+	margin: 0 20px;	
+}
+
+.contacts li a {
+	font-size: 25px;
+	color: #bababa;
+	transition: all 0.2s ease-in-out;
+}
+
+.twitter :hover{
+	color: #55acee;
+}
+
+.facebook :hover{
+	color: #3b5998;
+}
+
+.instagram :hover {
+	color: #e95950;
+}
