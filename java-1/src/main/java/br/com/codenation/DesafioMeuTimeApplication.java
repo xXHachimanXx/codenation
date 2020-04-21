@@ -5,7 +5,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.codenation.desafio.exceptions.JogadorNaoEncontradoException;
 import br.com.codenation.desafio.exceptions.TimeNaoEncontradoException;
+import br.com.codenation.gerenciadores.GerenciadorJogadores;
 import br.com.codenation.gerenciadores.GerenciadorTimes;
 import br.com.codenation.model.Jogador;
 import br.com.codenation.model.Time;
@@ -29,7 +31,8 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 	}
 
 	@Desafio("incluirJogador")
-	public void incluirJogador(Long id, Long idTime, String nome, LocalDate dataNascimento, Integer nivelHabilidade, BigDecimal salario) {
+	public void incluirJogador(Long id, Long idTime, String nome, LocalDate dataNascimento, Integer nivelHabilidade, BigDecimal salario)
+    {
 		try {
 			Jogador jogador = new Jogador(id, idTime, nome, dataNascimento, nivelHabilidade, salario); // Pode ter parametros invalidos
 
@@ -49,7 +52,20 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
 	@Desafio("definirCapitao")
 	public void definirCapitao(Long idJogador) {
-		throw new UnsupportedOperationException();
+		try {
+            Jogador novoCapitao = GerenciadorJogadores.buscarJogador(idJogador); // Buscar novo capitão
+            Time timeNovoCapitao = GerenciadorTimes.buscarTime(novoCapitao.getTime()); // Buscar time do novo capitão
+
+            Jogador antigoCapitao = GerenciadorJogadores.buscarJogador(timeNovoCapitao.getCapitao()); // Buscar antigo capitão
+            antigoCapitao.setCapitao(false); // Transformar antigo capitão em jogador comum
+            novoCapitao.setCapitao(true); // Transformar novo capitão
+
+            timeNovoCapitao.setCapitao(novoCapitao.getIdJogador()); // Setar capitão do time
+
+        }
+		catch (JogadorNaoEncontradoException jnee) {
+            System.err.println("Jogador não encontrado: " + jnee.getMessage());
+        };
 	}
 
 	@Desafio("buscarCapitaoDoTime")

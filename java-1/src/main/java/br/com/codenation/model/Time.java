@@ -18,7 +18,7 @@ public class Time {
     private final List<Jogador> jogadoresDoTime;
 
     public Time(Long idTime, String nome, LocalDate dataCriacao,
-                String corUniformePrincipal, String corUniformeSecundario) throws RuntimeException
+                String corUniformePrincipal, String corUniformeSecundario) throws IdentificadorUtilizadoException, NullPointerException
     {
         if(idTime != null && !nome.equals("") && dataCriacao != null &&
                 !corUniformePrincipal.equals("") && !corUniformeSecundario.equals(""))

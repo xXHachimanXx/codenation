@@ -13,9 +13,11 @@ public class Jogador {
     private LocalDate dataNascimento;
     private Integer nivelHabilidade;
     private BigDecimal salario;
+    private boolean capitao;
 
     public Jogador(Long idJogador, Long time, String nome, LocalDate dataNascimento,
-                   Integer nivelHabilidade, BigDecimal salario) {
+                   Integer nivelHabilidade, BigDecimal salario) throws IdentificadorUtilizadoException, NullPointerException
+    {
         if(idJogador != null && time != null && !nome.equals("")
                 && dataNascimento != null && salario != null)
         {
@@ -26,6 +28,7 @@ public class Jogador {
                 setDataNascimento(dataNascimento);
                 setNivelHabilidade(nivelHabilidade);
                 setSalario(salario);
+                setCapitao(false);
             }
             else{
                 throw new IdentificadorUtilizadoException();
@@ -34,6 +37,10 @@ public class Jogador {
             throw new NullPointerException("Campo Inválido");
         }
     }
+
+    public void setCapitao(boolean capitao) { this.capitao = capitao; }
+
+    public boolean getCapitao() { return this.capitao; }
 
     public Long getIdJogador() {
         return idJogador;
