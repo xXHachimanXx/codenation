@@ -1,7 +1,6 @@
 package br.com.codenation.model;
 
-import br.com.codenation.desafio.exceptions.IdentificadorUtilizadoException;
-import br.com.codenation.gerenciadores.GerenciadorTimes;
+import br.com.codenation.desafio.exceptions.CapitaoNaoInformadoException;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,43 +13,13 @@ public class Time {
     private String corUniformePrincipal;
     private String corUniformeSecundario;
     private Long capitao;
-    private Long melhorJogador;
-    private final List<Jogador> jogadoresDoTime;
-
-    public Time(Long idTime, String nome, LocalDate dataCriacao,
-                String corUniformePrincipal, String corUniformeSecundario) throws IdentificadorUtilizadoException, NullPointerException
-    {
-        if(idTime != null && !nome.equals("") && dataCriacao != null &&
-                !corUniformePrincipal.equals("") && !corUniformeSecundario.equals(""))
-        {
-            if(!GerenciadorTimes.timeExiste(idTime)) {
-                setIdTime(idTime);
-                setNome(nome);
-                setDataCriacao(dataCriacao);
-                setCorUniformePrincipal(corUniformePrincipal);
-                setCorUniformeSecundario(corUniformeSecundario);
-                this.jogadoresDoTime = new ArrayList <>();
-            }
-            else{
-                throw new IdentificadorUtilizadoException();
-            }
-        }else {
-            throw new NullPointerException("Campo Inválido");
-        }
-    }
+    private final List<Long> jogadoresDoTime = new ArrayList <>();
 
     public long getIdTime() {
         return idTime;
     }
 
-    private void setIdTime(Long idTime) {
-        if(idTime != null) {
-            if(!GerenciadorTimes.timeExiste(idTime))
-                this.idTime = idTime;
-            else
-                throw new IdentificadorUtilizadoException();
-        }else { throw new NullPointerException("Campo Inválido"); }
-    }
+    public void setIdTime(Long idTime) { this.idTime = idTime; }
 
     public String getNome() {
         return nome;
@@ -58,10 +27,6 @@ public class Time {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
     }
 
     public void setDataCriacao(LocalDate dataCriacao) {
@@ -84,7 +49,11 @@ public class Time {
         this.corUniformeSecundario = corUniformeSecundario;
     }
 
-    public Long getCapitao() {
+    public Long getCapitao() throws CapitaoNaoInformadoException
+    {
+        if(this.capitao == null) {
+            throw new CapitaoNaoInformadoException();
+        }
         return capitao;
     }
 
@@ -92,20 +61,10 @@ public class Time {
         this.capitao = capitao;
     }
 
-    public List <Jogador> getJogadoresDoTime() {
+    public List <Long> getJogadoresDoTime() {
         return jogadoresDoTime;
     }
-    public void adicionarJogador(Jogador jogador) {
-        jogadoresDoTime.add(jogador);
-    }
 
-    public Long getMelhorJogador() {
-        return melhorJogador;
-    }
-
-    public void setMelhorJogador(Long melhorJogador) {
-        this.melhorJogador = melhorJogador;
-    }
 
     @Override
     public String toString() {

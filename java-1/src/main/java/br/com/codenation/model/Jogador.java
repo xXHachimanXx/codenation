@@ -1,8 +1,5 @@
 package br.com.codenation.model;
 
-import br.com.codenation.desafio.exceptions.IdentificadorUtilizadoException;
-import br.com.codenation.gerenciadores.GerenciadorJogadores;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -13,34 +10,7 @@ public class Jogador {
     private LocalDate dataNascimento;
     private Integer nivelHabilidade;
     private BigDecimal salario;
-    private boolean capitao;
-
-    public Jogador(Long idJogador, Long time, String nome, LocalDate dataNascimento,
-                   Integer nivelHabilidade, BigDecimal salario) throws IdentificadorUtilizadoException, NullPointerException
-    {
-        if(idJogador != null && time != null && !nome.equals("")
-                && dataNascimento != null && salario != null)
-        {
-            if(!GerenciadorJogadores.jogadorExiste(idJogador, time)) {
-                setIdJogador(idJogador);
-                setTime(time);
-                setNome(nome);
-                setDataNascimento(dataNascimento);
-                setNivelHabilidade(nivelHabilidade);
-                setSalario(salario);
-                setCapitao(false);
-            }
-            else{
-                throw new IdentificadorUtilizadoException();
-            }
-        }else {
-            throw new NullPointerException("Campo Inválido");
-        }
-    }
-
-    public void setCapitao(boolean capitao) { this.capitao = capitao; }
-
-    public boolean getCapitao() { return this.capitao; }
+    private boolean isCapitao;
 
     public Long getIdJogador() {
         return idJogador;
@@ -89,6 +59,15 @@ public class Jogador {
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
     }
+
+    public boolean getIsCapitao() {
+        return isCapitao;
+    }
+
+    public void setIsCapitao(boolean isCapitao) {
+        this.isCapitao = isCapitao;
+    }
+
 
 
     @Override
