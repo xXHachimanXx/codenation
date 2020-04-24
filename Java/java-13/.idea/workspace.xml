@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="01a217c6-8c66-4bb7-8e0d-f9e371ac6b17" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/bin/main/br/com/codenation/desafioexe/DesafioApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/bin/test/br/com/codenation/desafioexe/DesafioApplicationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/classes/java/main/br/com/codenation/desafioexe/DesafioApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/classes/java/test/br/com/codenation/desafioexe/DesafioApplicationSubmitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/classes/java/test/br/com/codenation/desafioexe/DesafioApplicationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/reports/tests/test/classes/br.com.codenation.desafioexe.DesafioApplicationSubmitTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/reports/tests/test/packages/br.com.codenation.desafioexe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/test-results/test/TEST-br.com.codenation.desafioexe.DesafioApplicationSubmitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/src/main/java/br/com/codenation/desafioexe/DesafioApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/src/test/java/br/com/codenation/desafioexe/DesafioApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-0/stdout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/calculadora/CalculadoraSalario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/calculadora/CalculadoraSalario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/boku-no-hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/capa-madmax.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/capa-madmax2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/deadpool.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/heisenberg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/logo-imdb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-alita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-batman-superman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-bladerunner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-capita-marvel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-civil-war.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-coringa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-deadpool-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-guerra-civil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-jurassic-world.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-liga-justica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-mad-max.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-moonlight.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-pantera-negra.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/poster-star-wars.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/img/walter-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-11/stdout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/instagram-glyph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/instagram-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/black-panther/black-panther-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/black-panther/black-panther-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/black-panther/black-panther-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/black-panther/black-panther-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/black-panther/black-panther-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/black-panther/black-panther-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/black-panther/black-panther-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/bruce/bruce-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/bruce/bruce-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/bruce/bruce-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/bruce/bruce-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/bruce/bruce-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/bruce/bruce-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/carol/carol-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/carol/carol-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/carol/carol-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/carol/carol-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/carol/carol-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/carol/carol-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/carol/carol-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/domino/domino-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/domino/domino-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/domino/domino-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/domino/domino-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/gamora/gamora-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/gamora/gamora-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/gamora/gamora-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/gamora/gamora-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/gamora/gamora-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/yoda/yoda-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/yoda/yoda-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/yoda/yoda-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/yoda/yoda-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/img/profiles/yoda/yoda-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/public/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/stdout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/wireframes/instagram-feed-concept.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/wireframes/instagram-profile-concept.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-12/wireframes/instagram.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ag51jYjMJOVSDK1YccK2DTye2U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="Gradle.CalculadoraSalarioSubmitTest.salarioBruto1032Liquido949">
+    <configuration name="CalculadoraSalarioSubmitTest.salarioBruto1000Liquido0" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.codenation.calculadora.CalculadoraSalarioSubmitTest.salarioBruto1000Liquido0&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CalculadoraSalarioSubmitTest.salarioBruto1031e99Liquido0" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.codenation.calculadora.CalculadoraSalarioSubmitTest.salarioBruto1031e99Liquido0&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CalculadoraSalarioSubmitTest.salarioBruto1032Liquido949" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.codenation.calculadora.CalculadoraSalarioSubmitTest.salarioBruto1032Liquido949&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CalculadoraSalarioSubmitTest.salarioBruto1032Liquido949" />
+        <item itemvalue="Gradle.CalculadoraSalarioSubmitTest.salarioBruto1000Liquido0" />
+        <item itemvalue="Gradle.CalculadoraSalarioSubmitTest.salarioBruto1031e99Liquido0" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01a217c6-8c66-4bb7-8e0d-f9e371ac6b17" name="Default Changelist" comment="" />
+      <created>1587144183338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587144183338</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1320" height="174" key="GridCell.Tab.0.bottom" timestamp="1587146244635">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="174" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1587146244635" />
+    <state width="1320" height="174" key="GridCell.Tab.0.center" timestamp="1587146244634">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="174" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1587146244634" />
+    <state width="1320" height="174" key="GridCell.Tab.0.left" timestamp="1587146244633">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="174" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1587146244633" />
+    <state width="1320" height="174" key="GridCell.Tab.0.right" timestamp="1587146244634">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="174" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1587146244634" />
+  </component>
+</project>

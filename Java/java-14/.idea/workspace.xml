@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="659b5fc6-0c89-4d1b-9cf7-f4e2b2686358" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/StatisticUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/StatisticUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/br/com/codenation/StatisticUtilTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/br/com/codenation/StatisticUtilTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.codenation.StatisticUtilSubmitTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.codenation.StatisticUtilSubmitTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.codenation.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.codenation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.codenation.StatisticUtilSubmitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.codenation.StatisticUtilSubmitTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/StatisticUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/StatisticUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/codenation/StatisticUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/codenation/StatisticUtilTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1asEg7UaxvFuSBwvNhh1Hka5fm1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="Gradle.StatisticUtilTest.testMode">
+    <configuration name="StatisticUtilTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.codenation.StatisticUtilTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StatisticUtilTest.testAverage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.codenation.StatisticUtilTest.testAverage&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StatisticUtilTest.testMedian" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.codenation.StatisticUtilTest.testMedian&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StatisticUtilTest.testMode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.codenation.StatisticUtilTest.testMode&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.StatisticUtilTest.testMode" />
+        <item itemvalue="Gradle.StatisticUtilTest" />
+        <item itemvalue="Gradle.StatisticUtilTest.testAverage" />
+        <item itemvalue="Gradle.StatisticUtilTest.testMedian" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="659b5fc6-0c89-4d1b-9cf7-f4e2b2686358" name="Default Changelist" comment="" />
+      <created>1587516009960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587516009960</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1320" height="181" key="GridCell.Tab.0.bottom" timestamp="1587564874574">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="181" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1587564874574" />
+    <state width="1320" height="181" key="GridCell.Tab.0.center" timestamp="1587564874573">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="181" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1587564874573" />
+    <state width="1320" height="181" key="GridCell.Tab.0.left" timestamp="1587564874573">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="181" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1587564874573" />
+    <state width="1320" height="181" key="GridCell.Tab.0.right" timestamp="1587564874574">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1320" height="181" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1587564874574" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1587516670557">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.31.1366.737@0.31.1366.737" timestamp="1587516670557" />
+  </component>
+</project>
