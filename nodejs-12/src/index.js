@@ -12,11 +12,7 @@ const categorys = ['T-SHIRTS', 'PANTS', 'SHOES', 'BAGS'];
 function getProductsFromDataBase(ids, productList) {
 	var products = [];
 
-	productList.forEach(element => {
-		if (ids.includes(element.id)) {
-			products.push(element);
-		}
-	});
+	products = productList.filter( element => ids.includes(element.id) );
 
 	return products;
 }
@@ -107,8 +103,7 @@ function getPriceValues(products, promotion) {
 	});
 
 	discountValue = (regularPrice - totalPrice).toFixed(2);
-	discount = ((discountValue * 100) / regularPrice).toFixed(2);
-	discount += "%";
+	discount = `${((discountValue * 100) / regularPrice).toFixed(2)}%`;	
 	totalPrice = totalPrice.toFixed(2);
 
 	return {
