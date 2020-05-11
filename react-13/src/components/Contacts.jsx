@@ -1,8 +1,11 @@
 import React from "react";
 
+import Contact from "./Contact";
+
 import "../App.scss";
 
 class Contacts extends React.Component {
+
 	render() {
 		return (
 			<section className="contacts">
@@ -15,6 +18,8 @@ class Contacts extends React.Component {
 					<span className="contact__data">Empresa</span>
 					<span className="contact__data">Departamento</span>
 				</article>
+
+				{this.props.children}
 			</section>
 		);
 	}
