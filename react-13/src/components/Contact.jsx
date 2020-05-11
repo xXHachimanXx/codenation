@@ -27,17 +27,17 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <article className="contact">
-        <span className="contact__avatar">
-          <img src={this.avatar} alt={this.name}/>
-        </span>
-        <span className="contact__data">{this.name}</span>
-        <span className="contact__data">{this.phone}</span>
-        <span className="contact__data">{this.country}</span>
-        <span className="contact__data">{this.admissionDate}</span>
-        <span className="contact__data">{this.company}</span>
-        <span className="contact__data">{this.departament}</span>
-      </article>
+        <article className="contact" data-testid="contact">
+          <span className="contact__avatar">
+            <img src={this.avatar} alt={this.name} />
+          </span>
+          <span className="contact__data">{this.name}</span>
+          <span className="contact__data">{this.phone}</span>
+          <span className="contact__data">{this.country}</span>
+          <span className="contact__data">{this.admissionDate}</span>
+          <span className="contact__data">{this.company}</span>
+          <span className="contact__data">{this.departament}</span>
+        </article>      
     );
   }
 }

@@ -17,43 +17,53 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const database = fetch(URL_TO_FETCH, { method: 'get' })
+    const database = fetch(URL_TO_FETCH, { method: 'get' });
+    database
       .then((res) => res.json())
-      .then( (res) => this.setState({
+      .then((res) => this.setState({
         contactList: res
       }))
       .catch((err) => console.warn(err));
   }
 
-  render() {
+  /*
+  handlerSortContacts(key = 'Name') {
+    if (key === 'Name') {
+      this.setState(oldState => oldState.contactList.sort((x, y) => x.name > y.name));
+    } else if (key === 'Country') {
+      this.setState(oldState => oldState.contactList.sort((x, y) => x.country > y.country));
+    } else if (key === 'Company') {
+      this.setState(oldState => oldState.contactList.sort((x, y) => x.company > y.company));
+    } else if (key === 'Departament') {
+      this.setState(oldState => oldState.contactList.sort((x, y) => x.departament > y.departament));
+    } else if (key === 'AdmissionDate') {
+      this.setState(oldState => oldState.contactList.sort((x, y) => x.admissionDate > y.admissionDate));
+    }
+  }
+  */
 
-    const {contactList} = this.state;
+  render() {
 
     return (
       <React.Fragment>
         <Topbar />
+        <Filters />
 
-        <div className="container">
-          <Filters />
-        </div>
-
-        <div className="container">
-          <Contacts>{
-            contactList.map((contact) => (
-              <Contact
-                key={contact.id}
-                name={contact.name}
-                avatar={contact.avatar}
-                company={contact.company}
-                departament={contact.departament}
-                admissionDate={contact.admissionDate}
-                phone={contact.phone}
-                country={contact.country}
-              />
-            ))}</Contacts>
-        </div>
+        <Contacts>{
+          this.state.contactList.map((contact) => (
+            <Contact
+              key={contact.id}
+              name={contact.name}
+              avatar={contact.avatar}
+              company={contact.company}
+              departament={contact.departament}
+              admissionDate={contact.admissionDate}
+              phone={contact.phone}
+              country={contact.country}
+            />
+          ))}</Contacts>
       </React.Fragment>
-    )
+    );
   }
 }
 
