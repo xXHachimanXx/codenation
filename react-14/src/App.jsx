@@ -13,7 +13,7 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { contactList: [] };
+    this.state = { contactList: [], filter: "name", search: "", contactListFiltered: [] };
   }
 
   componentDidMount() {
@@ -21,50 +21,85 @@ class App extends React.Component {
     database
       .then((res) => res.json())
       .then((res) => this.setState({
-        contactList: res
+        contactList: res,
+        contactListFiltered: res
       }))
       .catch((err) => console.warn(err));
   }
 
-  /*
-  handleSortContacts(key = 'Name') {
-    if (key === 'Name') {
-      this.setState(oldState => oldState.contactList.sort((x, y) => x.name > y.name));
-    } else if (key === 'Country') {
-      this.setState(oldState => oldState.contactList.sort((x, y) => x.country > y.country));
-    } else if (key === 'Company') {
-      this.setState(oldState => oldState.contactList.sort((x, y) => x.company > y.company));
-    } else if (key === 'Departament') {
-      this.setState(oldState => oldState.contactList.sort((x, y) => x.departament > y.departament));
-    } else if (key === 'AdmissionDate') {
-      this.setState(oldState => oldState.contactList.sort((x, y) => x.admissionDate > y.admissionDate));
+  searchFilter(contact, searchText) {
+    return (
+      contact.name.toLowerCase().includes(searchText)
+    );
+  }
+
+  async handleSearchContact(searchText) {
+    this.setState({ search: searchText });
+
+    if (searchText !== "" && searchText !== undefined) {
+      await this.setState({
+        contactListFiltered: this.state.contactList.filter(
+          (contact) => (this.searchFilter(contact, searchText))
+        )
+      });
+    }
+    else {
+      this.setState({ contactListFiltered: this.state.contactList });
     }
   }
-  */
+
+  handleSortContacts(sortKey) {
+    this.setState({ filter: sortKey });
+
+    if (sortKey !== "" && sortKey !== undefined) {
+      const newContactList = this.state.contactListFiltered;
+
+      newContactList.sort(
+        (c1, c2) => {
+          const x = c1[sortKey].toLowerCase();
+          const y = c2[sortKey].toLowerCase();
+
+          return x > y ? 1 : x < y ? -1 : 0;
+        }
+      );
+
+      this.setState({ contactListFiltered: newContactList });
+
+    }
+    else {
+      this.setState({ contactListFiltered: this.state.contactList });
+    }
+  }
 
   render() {
-
     return (
       <React.Fragment>
-        <Topbar />
-        <Filters />
+        <div className="app" data-testid="app">
+          <Topbar />
+          <Filters
+            getSearchText={this.handleSearchContact.bind(this)}
+            getSortKey={this.handleSortContacts.bind(this)}
+          />
 
-        <Contacts>{
-          this.state.contactList.map((contact) => (
-            <Contact
-              key={contact.id}
-              name={contact.name}
-              avatar={contact.avatar}
-              company={contact.company}
-              department={contact.department}
-              admissionDate={contact.admissionDate}
-              phone={contact.phone}
-              country={contact.country}
-            />
-          ))}</Contacts>
+          <Contacts>
+            {this.state.contactListFiltered
+              .map((contact) => (
+                <Contact
+                  key={contact.id}
+                  name={contact.name}
+                  avatar={contact.avatar}
+                  company={contact.company}
+                  department={contact.department}
+                  admissionDate={contact.admissionDate}
+                  phone={contact.phone}
+                  country={contact.country}
+                />
+              ))}
+          </Contacts>
+        </div>
       </React.Fragment>
     );
   }
 }
-
 export default App;
+

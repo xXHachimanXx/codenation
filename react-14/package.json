@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test src/__tests__/submit.test.js",
     "eject": "react-scripts eject",
     "submit": "react-scripts test src/__tests__/submit.test.js --reporters=default --reporters=jest-junit"
   },

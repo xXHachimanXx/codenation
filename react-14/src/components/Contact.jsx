@@ -5,6 +5,7 @@ class Contact extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.id = props.id;
     this.name = props.name;
     this.avatar = props.avatar;
@@ -31,12 +32,12 @@ class Contact extends React.Component {
           <span className="contact__avatar">
             <img src={this.avatar} alt={this.name} />
           </span>
-          <span className="contact__data">{this.name}</span>
-          <span className="contact__data">{this.phone}</span>
-          <span className="contact__data">{this.country}</span>
-          <span className="contact__data">{this.admissionDate}</span>
-          <span className="contact__data">{this.company}</span>
-          <span className="contact__data">{this.department}</span>
+          <span className="contact__data" data-testid="contact-name" >{this.name}</span>
+          <span className="contact__data"data-testid="contact-phone">{this.phone}</span>
+          <span className="contact__data" data-testid="contact-country">{this.country}</span>
+          <span className="contact__data" data-testid="contact-date">{this.admissionDate}</span>
+          <span className="contact__data" data-testid="contact-company">{this.company}</span>
+          <span className="contact__data" data-testid="contact-department">{this.department}</span>
         </article>      
     );
   }
