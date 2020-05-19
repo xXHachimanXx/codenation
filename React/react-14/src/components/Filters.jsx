@@ -38,7 +38,7 @@ class Filters extends React.Component {
 						<input
 							type="text"
 							className="filters__search__input" placeholder="Pesquisar"
-							onChange={this.handleChangeSearch}
+							onChange={this.handleChangeSearch}							
 						/>
 
 						<button className="filters__search__icon" onClick={this.handleChangeSearch}>

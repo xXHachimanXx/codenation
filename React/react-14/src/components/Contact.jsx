@@ -5,16 +5,15 @@ class Contact extends React.Component {
 
   constructor(props) {
     super(props);
-    this.data = props.data;
     
-    this.id = props.data.id;
-    this.name = props.data.name;
-    this.avatar = props.data.avatar;
-    this.company = props.data.company;
-    this.department = props.data.department;
-    this.admissionDate = this.formatDate(props.data.admissionDate);
-    this.phone = props.data.phone;
-    this.country = props.data.country;
+    this.id = props.id;
+    this.name = props.name;
+    this.avatar = props.avatar;
+    this.company = props.company;
+    this.department = props.department;
+    this.admissionDate = this.formatDate(props.admissionDate);
+    this.phone = props.phone;
+    this.country = props.country;
   }
 
   // Formatar data
