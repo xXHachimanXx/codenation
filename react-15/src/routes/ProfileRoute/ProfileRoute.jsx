@@ -7,7 +7,7 @@ import Loading from '../../components/Loading';
 
 const ProfileRoute = () => {
   return (
-    <div data-testid="profile-route">
+    <div data-testid="profile-route">      
     </div>
   );
 };

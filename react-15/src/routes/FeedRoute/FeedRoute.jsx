@@ -8,8 +8,15 @@ import Posts from '../../containers/Posts';
 import './FeedRoute.scss';
 
 const FeedRoute = () => {
+
+  const [loading, setLoading] = useState(true);
+
   return (
     <div data-testid="feed-route">
+      <Loading />
+      <Stories />
+      <Posts />
+      
     </div>
   );
 };

@@ -12,9 +12,7 @@ const Stories = ({ stories, getUserHandler }) => {
         </div>
       </section>
 
-      {showStory && (
-        <Story />
-        )}
+      {( <Story /> )}
     </React.Fragment>
   );
 };
