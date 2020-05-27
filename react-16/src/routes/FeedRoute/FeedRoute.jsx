@@ -32,10 +32,15 @@ const FeedRoute = () => {
       .then((data) => setUsers(data));
   }, [])
 
+  const getUserById = (userId) => users.find(user => user.id === userId);
+
   return (
     <div data-testid="feed-route">
       {(
-        <Stories stories={stories} />
+        <Stories
+          stories={stories}
+          getUserHandler={getUserById}
+        />
       )}
 
 
