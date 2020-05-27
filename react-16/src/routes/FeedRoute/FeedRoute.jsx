@@ -17,6 +17,8 @@ const FeedRoute = () => {
   const [loading, setLoading] = useState(true);
   const [stories, setStories] = useState([]);
   const [users, setUsers] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [usersFetched, setUsersFetched] = useState(0);
 
   // Get Stories
   useEffect(() => {
@@ -32,18 +34,49 @@ const FeedRoute = () => {
       .then((data) => setUsers(data));
   }, [])
 
+  // Get posts
+  useEffect(() => {
+    fetch(GET_POSTS_LINK)
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+  }, []);
+
+  // GET USERS FETCHED
+  useEffect(() => {
+    if (usersFetched === users.length) {
+      return;
+    }
+
+    fetch(BASE_LINK + `${users[usersFetched].id}/posts`)
+      .then((res) => res.json())
+      .then(data => {
+        setPosts([...posts, ...data]);
+        setUsersFetched(usersFetched + 1);
+      });
+
+  }, [users, usersFetched]);
+
   const getUserById = (userId) => users.find(user => user.id === userId);
+  const getUserPostById = (postId) => getUserById(postId);
 
   return (
     <div data-testid="feed-route">
-      {(
-        <Stories
-          stories={stories}
-          getUserHandler={getUserById}
-        />
-      )}
+      {(stories.length > 0 && users.length > 0) &&
+        (
+          <Stories
+            stories={stories}
+            getUserHandler={getUserById}
+          />
+        )
+      }
 
-
+      {users.length !== usersFetched ?
+        (<Loading />) :
+        (<Posts
+          posts={posts}
+          getUserHandler={getUserPostById}
+        />)
+      }
     </div>
   );
 };
@@ -52,11 +85,5 @@ export default FeedRoute;
 //<Posts />
 /*
 
-      {users.length !== usersFetched?
-      (<Loading />) :
-      (<Posts
-            posts={posts}
-            getUserHandler={getUserPostById}
-      />)
-      }
+
 */
