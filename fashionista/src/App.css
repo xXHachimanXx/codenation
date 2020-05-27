@@ -22,3 +22,17 @@ body {
 	font-weight: 700;
 	text-size-adjust: 100%;
 }
+
+.app__container {
+    display: block;
+    position: relative;
+	width: 100%;
+    margin: 0 auto;
+    padding: auto 1.6rem;
+}
+
+@media screen and (min-width: 1270px) {
+	.app__container {
+		width: 1270px;
+	}
+}

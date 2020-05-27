@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 
+import Topbar from "./containers/Topbar/Topbar";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">     
-      </header>
+      <Topbar />
     </div>
   );
 }
