@@ -23,8 +23,8 @@ const Post = ({ postInfo, userInfo }) => {
           <button className="post__context" type="button" onClick={() => setFollow(!follow)}>
             {
               follow
-                ? <span className="follow-btn is-following">seguindo</span>
-                : <span className="follow-btn">seguir</span>
+                ? <span className="follow-btn is-following">Seguindo</span>
+                : <span className="follow-btn">Seguir</span>
             }
           </button>
         </header>

@@ -31,7 +31,7 @@ const FeedRoute = () => {
     fetch(GET_USERS_LINK)
       .then((res) => res.json())
       .then((data) => setUsers(data));
-  }, [])
+  }, []);
 
   // GET USERS FETCHED
   useEffect(() => {
@@ -42,7 +42,6 @@ const FeedRoute = () => {
           setPosts([...posts, ...data]);
           setUsersFetched(usersFetched + 1);
         });
-        console.log(posts);
     }
   }, [users, usersFetched]);
 
