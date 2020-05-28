@@ -8,9 +8,8 @@ import Posts from '../../containers/Posts';
 import './FeedRoute.scss';
 
 const BASE_LINK = "https://5e7d0266a917d70016684219.mockapi.io/api/v1/";
-const GET_STORIES_LINK = BASE_LINK + "stories";
-const GET_USERS_LINK = BASE_LINK + "users";
-const GET_POSTS_LINK = BASE_LINK + "posts";
+const GET_STORIES_LINK = BASE_LINK + "stories/";
+const GET_USERS_LINK = BASE_LINK + "users/";
 
 const FeedRoute = () => {
 
@@ -25,7 +24,7 @@ const FeedRoute = () => {
     fetch(GET_STORIES_LINK)
       .then((res) => res.json())
       .then((data) => setStories(data));
-  });
+  }, [users]);
 
   // Get users
   useEffect(() => {
@@ -34,26 +33,17 @@ const FeedRoute = () => {
       .then((data) => setUsers(data));
   }, [])
 
-  // Get posts
-  useEffect(() => {
-    fetch(GET_POSTS_LINK)
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-  }, []);
-
   // GET USERS FETCHED
   useEffect(() => {
-    if (usersFetched === users.length) {
-      return;
+    if (usersFetched !== users.length) {
+      fetch(GET_USERS_LINK + `${users[usersFetched].id}/posts`)
+        .then((res) => res.json())
+        .then(data => {
+          setPosts([...posts, ...data]);
+          setUsersFetched(usersFetched + 1);
+        });
+        console.log(posts);
     }
-
-    fetch(BASE_LINK + `${users[usersFetched].id}/posts`)
-      .then((res) => res.json())
-      .then(data => {
-        setPosts([...posts, ...data]);
-        setUsersFetched(usersFetched + 1);
-      });
-
   }, [users, usersFetched]);
 
   const getUserById = (userId) => users.find(user => user.id === userId);
