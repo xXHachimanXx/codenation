@@ -9,9 +9,8 @@ const Story = ({ story, user, handleClose }) => {
   const [metadata, setMetadata] = useState(null);
   const [currentTime, setCurrentTime] = useState(null);
 
-  const updateProgress = useCallback(() => {    
-    if (metadata?.duration !== null && currentTime !== null) 
-    {
+  const updateProgress = useCallback(() => {
+    if (metadata?.duration !== null && currentTime !== null) {
       const elapsedTime = ((currentTime / metadata.duration) * 100);
       return `${elapsedTime.toFixed(3)}%`;
     }

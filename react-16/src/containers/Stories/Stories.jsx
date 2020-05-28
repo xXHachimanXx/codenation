@@ -10,8 +10,7 @@ const Stories = ({ stories, getUserHandler }) => {
   const [selectedStory, setSelectedStory] = useState({})
   const [selectedProfile, setSelectedProfile] = useState({});
 
-  const handleStories = (story) =>
-  {
+  const handleStories = (story) => {
     const user = getUserHandler(story.userId);
     setSelectedStory(story);
     setSelectedProfile(user);
@@ -25,9 +24,9 @@ const Stories = ({ stories, getUserHandler }) => {
           {
             stories.map((story, index) => {
               const user = getUserHandler(story.userId); // <--
-              
+
               return (
-                user && 
+                user &&
                 <button
                   key={story.id}
                   className={`user__thumb ${index === 0 && 'user__thumb--hasNew'}`}

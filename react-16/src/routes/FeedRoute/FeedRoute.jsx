@@ -7,9 +7,7 @@ import Posts from '../../containers/Posts';
 
 import './FeedRoute.scss';
 
-const BASE_LINK = "https://5e7d0266a917d70016684219.mockapi.io/api/v1/";
-const GET_STORIES_LINK = BASE_LINK + "stories/";
-const GET_USERS_LINK = BASE_LINK + "users/";
+import {BASE_LINK, GET_STORIES_LINK, GET_USERS_LINK} from "../../utils/constants";
 
 const FeedRoute = () => {
 
