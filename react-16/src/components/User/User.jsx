@@ -10,7 +10,12 @@ const User = ({ infoUser }) => {
       <header className="post__header">
         <Link to={`/users/${username}`} className="user">
           <div className="user__thumb">
-            <img src={avatar} alt={username} />
+            {
+              avatar ?
+                <img src={avatar} alt={username} /> :
+                <img src="https://viniciusvinna.netlify.app/assets/api-instagram/profiles/profile-placeholder.png"
+                  alt={username} />
+            }
           </div>
         </Link>
 
