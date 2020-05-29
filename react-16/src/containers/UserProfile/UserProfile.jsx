@@ -8,7 +8,7 @@ const UserProfile = ({ avatar, name, username }) => {
       <div className="profile-data">
         <div className="user">
           <figure className="user__thumb">
-            <img src={avatar} alt={name} />
+            <img src={avatar || "https://viniciusvinna.netlify.app/assets/api-instagram/profiles/profile-placeholder.png"} alt={name} />
           </figure>
 
           <p className="user__name">
