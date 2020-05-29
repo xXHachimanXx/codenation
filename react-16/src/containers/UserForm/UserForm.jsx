@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UserProfile } from "../UserProfile/UserProfile";
+import UserProfile from "../UserProfile/UserProfile";
 
 import SuccessMessage from '../../components/SuccessMessage';
 
@@ -9,7 +9,11 @@ const UserForm = () => {
   return (
     <React.Fragment>
       <form data-testid="user-form">
-        
+        <UserProfile />
+
+        <div className="container">
+          
+        </div>
       </form>
     </React.Fragment>
   );
