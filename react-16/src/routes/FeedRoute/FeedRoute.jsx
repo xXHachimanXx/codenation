@@ -7,11 +7,10 @@ import Posts from '../../containers/Posts';
 
 import './FeedRoute.scss';
 
-import {BASE_LINK, GET_STORIES_LINK, GET_USERS_LINK} from "../../utils/constants";
+import { GET_STORIES_LINK, GET_USERS_LINK} from "../../utils/constants";
 
 const FeedRoute = () => {
 
-  const [loading, setLoading] = useState(true);
   const [stories, setStories] = useState([]);
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
@@ -41,7 +40,7 @@ const FeedRoute = () => {
           setUsersFetched(usersFetched + 1);
         });
     }
-  }, [users, usersFetched]);
+  }, [users, usersFetched, posts]);
 
   const getUserById = (userId) => users.find(user => user.id === userId);
   const getUserPostById = (postId) => getUserById(postId);
