@@ -7,7 +7,7 @@ import CategoryItem from './CategoryItem';
 
 import './Categories.scss';
 
-const Categories = ({ data, isLoading, url }) => (<div className="categories" />);
+const Categories = ({ data, isLoading, url }) => (<div className="categories" data-testid="categories" />);
 
 export default Categories;
 
