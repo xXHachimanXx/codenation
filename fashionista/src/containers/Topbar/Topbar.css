@@ -11,6 +11,10 @@
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.02);
 }
 
+.topbar .app__container {
+  padding: 15px 30px;
+}
+
 .topbar__logo {
   display: inline-block;
   height: 40px;
