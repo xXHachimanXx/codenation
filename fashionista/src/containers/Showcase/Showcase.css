@@ -2,3 +2,11 @@
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
 }
+
+.products__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}

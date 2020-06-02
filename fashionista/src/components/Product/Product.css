@@ -1,0 +1,35 @@
+.product__card {
+    padding: 1rem .25rem;
+    position: relative;
+    text-align: center;
+    width: 50%;
+}
+
+.product__image {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.product__image img {
+    width: 100%;
+}
+
+.product__name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;    
+}
+
+.product__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -15,14 +15,14 @@ const Topbar = () => (
       <div className="topbar__group">
         <button className="topbar__icon--search">
           <Link to="/">
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i className="fa fa-search" aria-hidden="true"></i>
           </Link>
         </button>
 
         <button className="topbar__icon--cart">
           <Link to="/">
-            <i class="fa fa-shopping-cart" aria-hidden="true">
-              <sup class="counter"><span class="counter__value">0</span></sup>
+            <i className="fa fa-shopping-cart" aria-hidden="true">
+              <sup className="counter"><span className="counter__value">0</span></sup>
             </i>
           </Link>
         </button>
