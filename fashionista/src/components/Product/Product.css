@@ -2,14 +2,13 @@
     padding: 1rem .25rem;
     position: relative;
     text-align: center;
-    width: 50%;
+    width: 25%;
 }
 
 .product__image {
     overflow: hidden;
     width: 100%;
     position: relative;
-    margin: 0;
 }
 
 .product__image img {
@@ -25,7 +24,7 @@
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;    
+    width: 100%;
 }
 
 .product__price {

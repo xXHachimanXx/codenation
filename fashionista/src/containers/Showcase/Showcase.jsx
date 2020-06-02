@@ -12,6 +12,11 @@ const Showcase = () => {
 
 				<div className="products__grid">
 					<Product />
+					<Product />
+					<Product />
+					<Product />
+					<Product />
+					<Product />
 				</div>
 			</div>
 		</section>

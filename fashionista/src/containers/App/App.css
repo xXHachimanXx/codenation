@@ -35,13 +35,18 @@ button {
 	background-color: transparent;
 }
 
+.app {
+	min-height: 100vh;
+    position: relative;
+}
+
 .app__container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
-	padding: 15px 50px;
-	width: 100%;
+	padding: 15px 30px;	
+	width: 1279px;
 }
 
 @media screen and (min-width: 1279px) {
