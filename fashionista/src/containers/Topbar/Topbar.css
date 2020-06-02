@@ -1,17 +1,14 @@
 .topbar {
   backface-visibility: hidden;
-  background-color: #16202B;
+  background-color: #fff;
+  height: 70px;
   left: 0;
-  padding: 8px 16px;
   position: fixed;
   top: 0;
+  transform: translate3d(0, 0, 0);
   width: 100%;
-  z-index: 9000;
-}
-
-.topbar .container {
-  display: flex;
-  justify-content: space-between;
+  z-index: 10;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.02);
 }
 
 .topbar__logo {
@@ -19,48 +16,35 @@
   height: 40px;
 }
 
-.topbar__logo svg {
+.topbar__logo img {
   height: 100%;
 }
 
 .topbar__group {
   display: flex;
   justify-content: flex-end;
-}
-
-.topbar__icon,
-.topbar__icon a {
   align-items: center;
-  color: #858D93;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.6rem;
   font-weight: normal;
-  justify-content: center;
-  margin: auto 0.5rem;
-  transition: all 0.2s ease-in-out;
-
-  span {
-    display: none;
-  }
+  font-size: large;
 }
 
-.topbar__icon {
-  a {
-    &:hover {
-      color: white;
-    }
-  }
+.topbar__group a {
+  color: black;
+  font-size: 20px;
+  margin-right: 10px;
+  margin: 10px;
+  height: 100%;
+  border-radius: 100%;
 }
 
-@media screen and (min-width: 728px) {
-  .topbar__icon,
-  .topbar__icon a {
-    margin: auto 0.5rem;
-
-    span {
-      display: inline-block;
-      font-size: 1.1rem;
-    }
-  }
+.topbar__group .topbar__icon--cart .counter {
+  overflow: hidden;
+  border-radius: 50%;
+  background: #cf3838;
+  color: #fff;
+  width: 100%;
+  line-height: 1.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;
 }

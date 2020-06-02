@@ -1,5 +1,6 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap);
+
 *,
 *:after,
 *:before {
@@ -12,13 +13,15 @@ ul {
 	align-items: center;
 }
 
-a, li{
+a,
+li {
 	text-decoration: none;
 }
 
+
 body {
-    background-color: #f2f2f2;
-	font-family: "Montserrat", sans-serif;	
+	background-color: #f9f9f9;
+	font-family: "Montserrat", sans-serif;
 	font-size: 13px;
 	font-weight: 700;
 	text-size-adjust: 100%;
@@ -33,11 +36,12 @@ button {
 }
 
 .app__container {
-    display: block;
-    position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 15px 50px;
 	width: 100%;
-    margin: 0 auto;
-    padding: auto 1.6rem;
 }
 
 @media screen and (min-width: 1270px) {
