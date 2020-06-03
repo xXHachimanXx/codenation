@@ -41,15 +41,32 @@
   border-radius: 100%;
 }
 
-.topbar__group .topbar__icon--cart .counter {
+.topbar .topbar__icon--cart,  .topbar .topbar__icon--search {
+    cursor: pointer;
+    margin-right: 1rem;
+    background: transparent;
+    border-radius: 100%;
+    border: none;
+    box-shadow: none;
+    font-size: 1.6rem;
+    line-height: 0;
+    outline: none;
+    padding: 0;
+    position: relative;
+}
+
+.counter {
+  background: #cf1111;
+  color: white;
+  height: auto;
+  width: 1.5rem;
   overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
   border-radius: 50%;
-  background: #cf3838;
-  color: #fff;
-  width: 100%;
-  line-height: 1.6rem;
+  line-height: 1.5rem;
+  text-align: center;
   font-size: 1.1rem;
-  font-weight: 700;
-  white-space: nowrap;
-  
+  font-weight: 700;  
 }

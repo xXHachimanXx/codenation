@@ -10,9 +10,3 @@
     margin: 10px;
     width: 100%;
 }
-
-@media screen and (min-width: 992px) {
-    .products__grid {
-        justify-content: center;
-    }
-}
