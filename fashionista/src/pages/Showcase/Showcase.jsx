@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Product from '../../components/Product/Product.jsx';
+import Product from '../../components/Product/Product';
 
 import { getCatalog } from '../../services/api';
 
@@ -10,18 +10,9 @@ const Showcase = () => {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		async function getUsers() {
-			fetch("https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog/")
-				.then(res => res.json())
-				.then(data => setProducts([...data]))
-				.then(console.log(products));
-		}
-
-		getUsers()
+		getCatalog().then(data => setProducts([...data]));
 	}
-		, [products]);
-
-
+	, [products]);
 
 	return (
 		<section className="showcase">

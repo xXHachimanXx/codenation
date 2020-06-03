@@ -7,8 +7,6 @@ import { BrowserRouter } from "react-router-dom";
 import Topbar from '../Topbar/Topbar';
 import Routes from '../../routes/index';
 
-import Showcase from "../Showcase/Showcase";
-
 function App() {
   return (
     <div className="App">

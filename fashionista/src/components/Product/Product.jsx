@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Product.css';
 
+import Badge from "../Badge/Badge";
+
 const Product = ({ data }) => (	
 	<div className="product__card">
 		<Link to="/">
 			<figure className="product__image">
+				{data.discount_percentage && <Badge discount={data.discount_percentage}/>}
 				<img src={data.image} alt="Produto VESTIDO TRANSPASSE BOW" title="VESTIDO TRANSPASSE BOW" />
 			</figure>
 
