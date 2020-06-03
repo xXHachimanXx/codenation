@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Product.css';
 
-const Product = ({ data }) => (
-	data &&
+const Product = ({ data }) => (	
 	<div className="product__card">
 		<Link to="/">
 			<figure className="product__image">

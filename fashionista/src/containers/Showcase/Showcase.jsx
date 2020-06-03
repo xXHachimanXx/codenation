@@ -10,11 +10,18 @@ const Showcase = () => {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		fetch("https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog/")
-			.then(res => res.json())
-			.then(data => setProducts([...data]));
+		async function getUsers() {
+			fetch("https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog/")
+				.then(res => res.json())
+				.then(data => setProducts([...data]))
+				.then(console.log(products));
+		}
 
-	}, [products]);
+		getUsers()
+	}
+		, [products]);
+
+
 
 	return (
 		<section className="showcase">
@@ -23,11 +30,10 @@ const Showcase = () => {
 			</div>
 			<div className="app__container">
 				<div className="products__grid">
-					<Product data={products[0]} />
 					{
-						products > 0 &&
-						products.map((product) => (
-							<Product key={product.id} data={product} />
+						products.length > 0 &&
+						products.map((product, index) => (
+							<Product key={index} data={product} />
 						))
 					}
 				</div>
