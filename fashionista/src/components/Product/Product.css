@@ -23,6 +23,8 @@
     display: inline-block;
     font-size: 1.2rem;
     padding: .2rem;
+    background-color: #212529;
+    color: #fff;
 }
 
 .product__name {
