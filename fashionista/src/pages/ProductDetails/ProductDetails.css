@@ -1,0 +1,146 @@
+@media screen and (min-width: 1279px) {
+	.product__details {
+		width: 1279px;
+		padding-top: 1.6rem;
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
+}
+
+.product__details {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: left;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	padding-bottom: 6.5rem;
+	margin-top: 70px;
+}
+
+@media screen and (min-width: 1279px) {
+
+	.product__details .product__details__content,
+	.product__details .product__details__image {
+		width: 50%;
+	}
+}
+
+.product__detailst .product__details__content, .product__details .product__details__image {
+	width: 100%;
+}
+
+.product__details__image {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+.product__details .product__details__content,
+.product__details .product__details__image {
+	width: 100%;
+}
+
+.product__details__content {
+	padding-left: 1.6rem;
+	padding-right: 1.6rem;
+}
+
+.product__details__content .product__details__name {
+	text-align: left;
+	font-size: 2rem;
+	margin-bottom: .8rem;
+	letter-spacing: -.05rem;
+}
+
+.product__details__name {
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin-top: 1rem;
+	margin-bottom: .5rem;
+	overflow: hidden;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+/*começa aqui*/
+.product__details__content .product__details__pricing {
+	justify-content: left;
+}
+
+.product__details__pricing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.product__details__content .product__details__price {
+	font-size: 1.6rem;
+	margin-bottom: .8rem;
+	font-weight: 600;
+}
+
+.product__details__price {
+	font-size: 1.4rem;
+}
+
+.product__details__content .product__details__price--installments {
+	font-size: 1.4rem;
+	margin-left: 1rem;
+	color: #a7a7a7;
+}
+
+.product__details__content .product__details__price {
+	font-size: 1.6rem;
+	margin-bottom: .8rem;
+	font-weight: 600;
+}
+
+.product__details__price {
+	font-size: 1.4rem;
+}
+
+.product__details__sizes {
+	display: block;
+}
+
+.product__details__sizes__title {
+	color: #a7a7a7;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+.product__details__btnGroup {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+@media screen and (min-width: 1279px) {
+	.product__details__actions {
+		position: relative;
+		z-index: 0;
+		padding: 2rem 0;
+		width: auto;
+	}
+}
+
+.product__details__actions {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 1rem 1.6rem;
+	width: 100%;
+	z-index: 10;
+}
+
+@media screen and (min-width: 1279px) {
+	.product__details__addToCart {
+		width: 50%;
+	}
+}
