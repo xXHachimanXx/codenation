@@ -34,8 +34,8 @@ const ProductDetails = () => {
           <h3 className="product__details__name">{product.name}</h3>
 
           <div className="product__details__pricing">
-            <span className="product__price product__price--to">{product.regular_price}</span>
-            <span className="product__price product__price--installments">em até {product.installments}</span>
+            <span className="product__details__price product__details__price--to">{product.regular_price}</span>
+            <span className="product__details__price product__details__price--installments"> em até {product.installments}</span>
           </div>
 
           <div className="product__details__sizes">
@@ -44,6 +44,7 @@ const ProductDetails = () => {
               {/* <ButtonSizes> */}
             </div>
           </div>
+
           <div className="product__details__actions">
             <button className="product__details__addToCart">
               Adicionar ao carrinho
