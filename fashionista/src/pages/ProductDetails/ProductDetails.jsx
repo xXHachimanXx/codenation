@@ -50,8 +50,10 @@ const ProductDetails = () => {
               Adicionar ao carrinho
             </button>
           </div>
-
         </div>
+
+
+
       </div>
     </div>
   )

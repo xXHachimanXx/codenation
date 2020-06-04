@@ -1,12 +1,3 @@
-@media screen and (min-width: 1279px) {
-	.product__details {
-		width: 1279px;
-		padding-top: 1.6rem;
-		padding-left: 1.6rem;
-		padding-right: 1.6rem;
-	}
-}
-
 .product__details {
 	display: flex;
 	flex-direction: row;
@@ -26,16 +17,41 @@
 	.product__details .product__details__content {
 		width: 50%;
 	}
+
+	.product__details .product__details__image img {
+		justify-content: center;
+		width: 100%;
+	}
+
+	.product__details__actions {
+		position: relative;
+		z-index: 0;
+		padding: 2rem 0;
+	}
+
+	.product__details {
+		width: 1279px;
+		padding-top: 1.6rem;
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
+
+	.product__details__addToCart {
+		width: 50%;
+	}
+	
 }
 
 
 .product__details__image {
 	overflow: hidden;
-	width: 100%;
-	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
 }
 
 .product__details__image img {
+	justify-content: center;
 	width: 100%;
 }
 
@@ -113,40 +129,24 @@
 }
 
 .product__details__filter {
-    position: relative;
-    cursor: pointer;
-    font-weight: 600;
-    padding: .8rem 1rem;
-    border: .1rem solid #dfdfdf;
-    margin-right: .8rem;
-    background: transparent;
-    outline: none;
-    border-radius: .5rem;
+	position: relative;
+	cursor: pointer;
+	font-weight: 600;
+	padding: .8rem 1rem;
+	border: .1rem solid #dfdfdf;
+	margin-right: .8rem;
+	background: transparent;
+	outline: none;
+	border-radius: .5rem;
 }
 
-@media screen and (min-width: 1279px) {
-	.product__details__actions {
-		position: relative;
-		z-index: 0;
-		padding: 2rem 0;
-		width: auto;
-	}
-}
 
 .product__details__actions {
-	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	bottom: 0;
 	left: 0;
 	padding: 1rem 0;
-	width: 50%;
-	z-index: 10;
-}
-
-@media screen and (min-width: 1279px) {
-	.product__details__addToCart {
-		width: 50%;
-	}
+	width: 100%;
 }
 
 .product__details__addToCart {
@@ -160,9 +160,9 @@
 	outline: none;
 	cursor: pointer;
 	padding: 1.2rem;
-	position: relative;
 	text-align: center;
-	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
-	width: 100%;		
+	left: 0px;
+	position: relative;
+	width: 50%;
 }
