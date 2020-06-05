@@ -10,3 +10,6 @@
     margin: 10px;
     width: 100%;
 }
+.app__container .header__title{
+    margin: 0 12px;
+}

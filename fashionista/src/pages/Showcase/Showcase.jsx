@@ -16,7 +16,7 @@ const Showcase = () => {
 
 	return (
 		<section className="showcase">
-			<div className="app_container">
+			<div className="app__container">
 				<div className="header__title">Numero de produtos {products.length}</div>
 			</div>
 			<div className="app__container">
