@@ -20,15 +20,10 @@
 
     .drawer {
         right: 0;
-    }
-
-    .drawer,
-    .drawer .app__container {
-        width: 375px;
-    }
+    }    
 }
 
-.drawer-header {
+.drawer__header {
     backface-visibility: hidden;
     background-color: #fff;
     height: 5.5rem;
@@ -41,11 +36,11 @@
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .02);
 }
 
-.app__container .drawer-header__title {
+.app__container .drawer__header__title {
     width: 100%;
 }
 
-.drawer-header__title {
+.drawer__header__title {
     padding-bottom: 1.25rem;
     padding-top: 1.25rem;
     justify-content: flex-start;
@@ -53,7 +48,7 @@
     display: flex;
 }
 
-.drawer-header__icons {
+.drawer__header__icons {
     align-items: center;
     display: flex;    
     background: transparent;
@@ -69,12 +64,12 @@
 }
 
 
-.drawer-header__button--back {
+.drawer__header__button--back {
     font-size: 2.5rem;
     margin-right: auto;
 }
 
-.drawer-header__title-info{
+.drawer__header__title__info{
     font-size: 1.4rem;
     font-weight: 600;
     display: inline-block;
@@ -83,7 +78,7 @@
     margin: 0 auto;
 }
 
-.drawer-content {
+.drawer__content {
     padding-top: 5.5rem;
     width: 100%;
     background: #f9f9f9;
