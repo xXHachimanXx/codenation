@@ -9,18 +9,17 @@
     position: fixed;
     top: 0;
     z-index: 20;
+    right: 0;
+    width: 100%;
 }
 
-@media screen and (min-width: 1279px) {
+@media screen and (min-width: 879px) {
 
     .drawer,
     .drawer .app__container {
         width: 375px;
     }
 
-    .drawer {
-        right: 0;
-    }    
 }
 
 .drawer__header {
@@ -50,7 +49,7 @@
 
 .drawer__header__icons {
     align-items: center;
-    display: flex;    
+    display: flex;
     background: transparent;
     border-radius: 100%;
     border: none;
@@ -69,7 +68,7 @@
     margin-right: auto;
 }
 
-.drawer__header__title__info{
+.drawer__header__title__info {
     font-size: 1.4rem;
     font-weight: 600;
     display: inline-block;
@@ -84,4 +83,47 @@
     background: #f9f9f9;
     height: 100vh;
     overflow-y: auto;
+    padding-bottom: 5rem;
+}
+
+.drawer__product-list {
+    width: 100%;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.cart__empty {
+    font-size: 1.8rem;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    margin: 0 auto;
+    color: #a7a7a7;
+    transform: translate3d(0, -50%, 0);
+    text-align: center;
+    left: 0;
+    width: 100%;
+}
+
+.drawer__footer {
+    backface-visibility: hidden;
+    background: #212529;
+    bottom: 0;
+    box-shadow: 0 -0.2rem 2rem 0 rgba(0, 0, 0, .08);
+    color: #fff;
+    display: flex;
+    padding: 2rem 1.6rem;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    width: 100%;    
+    font-size: larger;
+    justify-content: flex-start;
+}
+
+.drawer__footer span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0 .7rem;
 }

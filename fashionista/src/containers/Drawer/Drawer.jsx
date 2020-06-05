@@ -20,10 +20,12 @@ const SizeButton = (counter) => {
       </header>
 
       <div className="drawer__content">
-        <div className="drawer__product-list"></div>
+        <div className="drawer__product-list">
+          <span class="cart__empty">Sua sacola está vazia :\</span>
+        </div>
+        <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
       </div>
 
-      <div className="drawer__footer"></div>
     </div>
   );
 };
