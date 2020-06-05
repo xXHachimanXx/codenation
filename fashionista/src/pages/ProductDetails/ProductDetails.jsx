@@ -5,6 +5,7 @@ import { DEFAULT_PRODUCT_IMAGE } from "../../utils/constants";
 import { getCatalog } from "../../services/api";
 
 import Topbar from "../../containers/Topbar/Topbar";
+import SizeButton from "../../components/SizeButton/SizeButton";
 
 import './ProductDetails.css';
 
@@ -41,7 +42,7 @@ const ProductDetails = () => {
           <div className="product__details__sizes">
             <p>Escolha o tamanho</p>
             <div className="product__details__btnGroup">
-              {/* <ButtonSizes> */}
+              { <SizeButton size="PP"/> }
             </div>
           </div>
 
