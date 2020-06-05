@@ -39,7 +39,7 @@
 	.product__details__addToCart {
 		width: 50%;
 	}
-	
+
 }
 
 
@@ -167,4 +167,11 @@
 	width: 50%;
 	font-size: large;
 	font-weight: 100;
+}
+
+.product__details__sizes p {
+	color: rgb(167, 167, 167);
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	font-weight: 200;
 }

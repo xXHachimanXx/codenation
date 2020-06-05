@@ -1,0 +1,92 @@
+.drawer {
+    transform: translateZ(0);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, .3), 0 15px 12px rgba(0, 0, 0, .22);
+    backface-visibility: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+@media screen and (min-width: 1279px) {
+
+    .drawer,
+    .drawer .app__container {
+        width: 375px;
+    }
+
+    .drawer {
+        right: 0;
+    }
+
+    .drawer,
+    .drawer .app__container {
+        width: 375px;
+    }
+}
+
+.drawer-header {
+    backface-visibility: hidden;
+    background-color: #fff;
+    height: 5.5rem;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: translateZ(0);
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .02);
+}
+
+.app__container .drawer-header__title {
+    width: 100%;
+}
+
+.drawer-header__title {
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.drawer-header__icons {
+    align-items: center;
+    display: flex;    
+    background: transparent;
+    border-radius: 100%;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 0;
+    outline: none;
+    padding: 0;
+    position: relative;
+}
+
+
+.drawer-header__button--back {
+    font-size: 2.5rem;
+    margin-right: auto;
+}
+
+.drawer-header__title-info{
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: inline-block;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    margin: 0 auto;
+}
+
+.drawer-content {
+    padding-top: 5.5rem;
+    width: 100%;
+    background: #f9f9f9;
+    height: 100vh;
+    overflow-y: auto;
+}

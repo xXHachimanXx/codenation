@@ -6,6 +6,7 @@ import { getCatalog } from "../../services/api";
 
 import Topbar from "../../containers/Topbar/Topbar";
 import SizeButton from "../../components/SizeButton/SizeButton";
+import Drawer from "../../containers/Drawer/Drawer";
 
 import './ProductDetails.css';
 
@@ -13,6 +14,7 @@ import './ProductDetails.css';
 const ProductDetails = () => {
 
   const [product, setProduct] = useState({});
+  const testCounter = 0;
 
   useEffect(() => {
     getCatalog().then(data => setProduct(data[0]));
@@ -42,7 +44,7 @@ const ProductDetails = () => {
           <div className="product__details__sizes">
             <p>Escolha o tamanho</p>
             <div className="product__details__btnGroup">
-              { <SizeButton size="PP"/> }
+              {<SizeButton size="PP" />}
             </div>
           </div>
 
@@ -52,10 +54,8 @@ const ProductDetails = () => {
             </button>
           </div>
         </div>
-
-
-
       </div>
+      <Drawer counter={testCounter} />
     </div>
   )
 }
