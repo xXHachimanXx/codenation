@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 import "./Drawer.css";
 
-const SizeButton = (show, context, counter, items = 0) => {
+const Drawer = (show, context, counter, items = 0) => {
   show = false; // debug
   return (
     show &&
@@ -26,12 +27,19 @@ const SizeButton = (show, context, counter, items = 0) => {
 
       <div className="drawer__content">
         <div className="drawer__product-list">
-          {/*debug*/context === 'sacola' && <span class="cart__empty">Sua sacola está vazia :\</span>}
+          {/*debug*/
+            context === 'sacola' &&
+
+            //<span class="cart__empty">Sua sacola está vazia :\</span>
+          }
         </div>
-        {/*debug*/context === 'sacola' && <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>}
+        {/*debug*/
+          context === 'sacola' &&
+          <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
+        }
       </div>
     </div>
   );
 };
 
-export default SizeButton;
+export default Drawer;

@@ -17,7 +17,7 @@ function CartProduct() {
           <p className="cart__product__size"><span></span></p>
           <div className="cart__product__quantity">
             <button className="cart__icons"></button>
-            <div className="product__cart__input"></div>
+            <div className="product__cart__input">0</div>
             <button className="cart__icons"></button>
           </div>
         </div>
