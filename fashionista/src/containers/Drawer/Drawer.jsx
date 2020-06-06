@@ -1,10 +1,12 @@
 import React from 'react';
 
+import CartProduct from '../../components/CartProduct/CartProduct';
 
 import "./Drawer.css";
 
 const Drawer = (show, context, counter, items = 0) => {
-  show = false; // debug
+  show = true; // debug
+  context = 'sacola';
   return (
     show &&
     <div className="drawer">
@@ -20,21 +22,24 @@ const Drawer = (show, context, counter, items = 0) => {
             {context === 'sacola' ? <span>{`Sacola (${items})`}</span> : <span>{"Buscar Produtos"}</span>}
           </div>
         </div>
-        <div className="drawer__search">
-          <input className="drawer__search__input" type="text" placeholder="Buscar por produto..." />
-        </div>
+        {
+          context === 'buscar' &&
+          <div className="drawer__search">
+            < input className="drawer__search__input" type="text" placeholder="Buscar por produto..." />
+          </div>
+        }
       </header>
 
       <div className="drawer__content">
         <div className="drawer__product-list">
           {/*debug*/
             context === 'sacola' &&
-
+            <CartProduct />
             //<span class="cart__empty">Sua sacola está vazia :\</span>
           }
         </div>
         {/*debug*/
-          context === 'sacola' &&
+          //context === 'sacola' &&
           <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
         }
       </div>

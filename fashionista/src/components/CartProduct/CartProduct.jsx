@@ -12,20 +12,30 @@ function CartProduct() {
         <figure className="cart__product__image">
           <img src="https://d3l7rqep7l31az.cloudfront.net/images/products/20002581_614_catalog_1.jpg?1459536611" alt="" />
         </figure>
+
         <div className="cart__product__info">
-          <p className="cart__product__name"></p>
-          <p className="cart__product__size"><span></span></p>
+          <p className="cart__product__name">BATA DECOTE FLUID</p>
+          <p className="cart__product__size"><span>Tam.: G</span></p>
           <div className="cart__product__quantity">
-            <button className="cart__icons"></button>
-            <div className="product__cart__input">0</div>
-            <button className="cart__icons"></button>
+            <button className="cart__product__icons">
+              <i class="fas fa-minus"></i>
+            </button>
+            <div className="cart__product__input">0</div>
+            <button className="cart__product__icons">
+              <i class="fas fa-plus"></i>
+            </button>
           </div>
         </div>
-        <div className="cart__product__pricing"></div>
+
+        <div className="cart__product__pricing">
+          <div className="cart__product__price">R$ 149,00</div>
+          <div className="cart__product__installments">3x R$ 49,97</div>
+        </div>
+
       </div>
 
       <div className="cart__product__remove">
-
+        <span> Remover item </span>
       </div>
     </div>
   );
