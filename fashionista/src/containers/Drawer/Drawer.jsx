@@ -4,8 +4,8 @@ import "./Drawer.css";
 
 const SizeButton = (show, context, counter, items = 0) => {
   show = false; // debug
-  return (    
-    show&&
+  return (
+    show &&
     <div className="drawer">
       <header className="drawer__header">
         <div className="drawer__header__title">
