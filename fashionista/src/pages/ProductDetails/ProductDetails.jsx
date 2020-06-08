@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { DEFAULT_PRODUCT_IMAGE } from "../../utils/constants";
-import { getCatalog } from "../../services/api";
+import {  } from "../../services/api";
 
 import Topbar from "../../containers/Topbar/Topbar";
 import SizeButton from "../../components/SizeButton/SizeButton";
@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const testCounter = 0;
 
   useEffect(() => {
-    getCatalog().then(data => setProduct(data[0]));
+    //getCatalog().then(data => setProduct(data[0]));
   }
     , [product]);
 

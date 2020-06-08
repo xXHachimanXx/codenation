@@ -14,8 +14,8 @@ const Product = ({ data }) => (
 				{data.discount_percentage && <Badge discount={data.discount_percentage} />}
 				<img
 					src={data.image ? data.image : DEFAULT_PRODUCT_IMAGE}
-					alt="Produto VESTIDO TRANSPASSE BOW"
-					title="VESTIDO TRANSPASSE BOW"
+					alt={data.name}
+					title={data.name}
 				/>
 			</figure>
 

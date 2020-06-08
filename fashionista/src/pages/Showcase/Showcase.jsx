@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Product from '../../components/Product/Product';
+import {useSelector, useDispatch} from 'react-redux';
 
-import { getCatalog } from '../../services/api';
+import { getProducts } from '../../store/actions/actions';
+
+import { fetchProducts } from '../../services/api';
 
 import './Showcase.css';
 
 const Showcase = () => {
 
-	const [products, setProducts] = useState([]);
+	const dispatch = useDispatch();
 
-	useEffect(() => {
-		getCatalog().then(data => setProducts([...data]));
+	const {products, setProducts} = useSelector(state => state);
+	console.log(products);
+
+	useEffect(() => {		
+		dispatch(getProducts());
 	}
-	, [products]);
+	, [dispatch]);
 
 	return (
 		<section className="showcase">
