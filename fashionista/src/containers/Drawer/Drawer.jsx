@@ -14,7 +14,7 @@ const Drawer = (show, context, counter, items = 0) => {
         <div className="drawer__header__title">
           <div className="drawer__header__icons">
             <button className="drawer__header__button--back">
-              <i class="fas fa-arrow-left"></i>
+              <i className="fas fa-arrow-left"></i>
             </button>
           </div>
 

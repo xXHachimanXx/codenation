@@ -18,11 +18,11 @@ function CartProduct() {
           <p className="cart__product__size"><span>Tam.: G</span></p>
           <div className="cart__product__quantity">
             <button className="cart__product__icons">
-              <i class="fas fa-minus"></i>
+              <i className="fas fa-minus"></i>
             </button>
             <div className="cart__product__input">0</div>
             <button className="cart__product__icons">
-              <i class="fas fa-plus"></i>
+              <i className="fas fa-plus"></i>
             </button>
           </div>
         </div>

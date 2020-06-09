@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import Product from '../../components/Product/Product';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { fetchProductsError, fetchProductsPending, fetchProductsSuccess } from '../../store/actions/actions';
+import { getProducts } from '../../store/actions/actions';
 
-import { fetchProducts } from '../../services/api';
+
 
 import './Showcase.css';
 
@@ -12,22 +12,12 @@ const Showcase = () => {
 
 	const dispatch = useDispatch();
 
-	const{ products } = useSelector(store => store);
+	const { products } = useSelector(store => store);
 
 	useEffect(() => {
-		async function getProducts() {
-			dispatch(fetchProductsPending());
-			try {
-				const data = await fetchProducts();
-				dispatch(fetchProductsSuccess(data));
-			}
-			catch (err) {
-				dispatch(fetchProductsError(err));
-			}
-		}
-		getProducts();			
-	}
-	, []);
+		if (products.length === 0)
+			getProducts(dispatch);
+	},[]);
 
 	return (
 		<section className="showcase">
@@ -38,7 +28,7 @@ const Showcase = () => {
 				<div className="products__grid">
 					{
 						products.length > 0 &&
-						products.map((product, index) => ( <Product key={index} data={product} />))
+						products.map((product, index) => (<Product key={index} data={product} />))
 					}
 				</div>
 			</div>

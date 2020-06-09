@@ -22,3 +22,14 @@ export const fetchProductsError = (error) => ({
     type: FETCH_PRODUCTS_ERROR,
     payload: error
 });
+
+export const getProducts = async (dispatch) => {
+    dispatch(fetchProductsPending());
+    try {
+        const data = await fetchProducts();
+        dispatch(fetchProductsSuccess(data));
+    }
+    catch (err) {
+        dispatch(fetchProductsError(err));
+    }
+}

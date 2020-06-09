@@ -7,7 +7,7 @@ import ProductDetails from '../pages/ProductDetails/ProductDetails';
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Showcase} />
-    <Route exact path="/produto/:nome" component={ProductDetails} />
+    <Route exact path="/produto/:code_color" component={ProductDetails} />
   </Switch>
 );
 

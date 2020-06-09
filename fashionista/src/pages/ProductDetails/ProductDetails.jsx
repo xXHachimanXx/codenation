@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
 
 import { DEFAULT_PRODUCT_IMAGE } from "../../utils/constants";
-import {  } from "../../services/api";
+import { getProducts } from "../../store/actions/actions";
 
 import Topbar from "../../containers/Topbar/Topbar";
 import SizeButton from "../../components/SizeButton/SizeButton";
@@ -13,17 +14,30 @@ import './ProductDetails.css';
 
 const ProductDetails = () => {
 
+  const { products } = useSelector(store => store);
+
   const [product, setProduct] = useState({});
-  const testCounter = 0;
+
+  const { code_color } = useParams();
+  const testCounter = 0; // Debug
 
   useEffect(() => {
-    //getCatalog().then(data => setProduct(data[0]));
-  }
-    , [product]);
+    if (products.length === 0 || product === null) {
+      var productJSON = localStorage.getItem('@fashionista/product');
+      setProduct(JSON.parse(productJSON)); // convertendo para JSON
+      console.log(product);
+      return;
+    }
+    let productAux = products.find((product) => product.code_color === code_color);
+    
+    setProduct(productAux);
+    var productString = JSON.stringify(productAux); //converter para salvar
+    localStorage.setItem('@fashionista/product', productString);
+
+  }, []);
 
   return (
     <div className="app__container">
-      <Topbar />
       <div className="product__details">
         <figure className="product__details__image">
           <img
