@@ -14,7 +14,7 @@ import './ProductDetails.css';
 
 const ProductDetails = () => {
 
-  const { products } = useSelector(store => store);
+  const { products } = useSelector(store => store.drawerReducer);
 
   const [product, setProduct] = useState({});
 

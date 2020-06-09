@@ -9,8 +9,7 @@ const combinedReducers = combineReducers({
     productsReducer, 
     drawerReducer
 });
-//const middlewares = [thunk];
 
-const store = createStore(combinedReducers, INITIAL_STATE, applyMiddleware(thunk));
+const store = createStore(combinedReducers, INITIAL_STATE);
 
 export default store;

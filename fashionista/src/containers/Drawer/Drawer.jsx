@@ -1,15 +1,14 @@
 import React from 'react';
+import { connect } from "react-redux";
 
 import CartProduct from '../../components/CartProduct/CartProduct';
 
 import "./Drawer.css";
 
-const Drawer = (show, context, counter, items = 0) => {
-  show = true; // debug
-  context = 'sacola';
+const Drawer = (visible, cartContext, searchContext, counter) => {  
+
   return (
-    show &&
-    <div className="drawer">
+    <div className={visible? "drawer" : ""}>
       <header className="drawer__header">
         <div className="drawer__header__title">
           <div className="drawer__header__icons">
@@ -19,11 +18,11 @@ const Drawer = (show, context, counter, items = 0) => {
           </div>
 
           <div className="drawer__header__title__info">
-            {context === 'sacola' ? <span>{`Sacola (${items})`}</span> : <span>{"Buscar Produtos"}</span>}
+            {cartContext && !searchContext? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
           </div>
         </div>
         {
-          context === 'buscar' &&
+          !cartContext && searchContext &&
           <div className="drawer__search">
             < input className="drawer__search__input" type="text" placeholder="Buscar por produto..." />
           </div>
@@ -33,7 +32,7 @@ const Drawer = (show, context, counter, items = 0) => {
       <div className="drawer__content">
         <div className="drawer__product-list">
           {/*debug*/
-            context === 'sacola' &&
+            cartContext &&
             <CartProduct />
             //<span class="cart__empty">Sua sacola está vazia :\</span>
           }
@@ -47,4 +46,11 @@ const Drawer = (show, context, counter, items = 0) => {
   );
 };
 
-export default Drawer;
+const mapStateToProps = store => ({
+  visible: store.drawer.visible,
+  cartContext: store.drawer.cartContext,
+  searchContext: store.drawer.searchContext,
+  counter: store.drawer.counter,
+});
+
+export default connect(mapStateToProps)(Drawer);
