@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Product from '../../components/Product/Product';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { getProducts } from '../../store/actions/actions';
+import { fetchProductsError, fetchProductsPending, fetchProductsSuccess } from '../../store/actions/actions';
 
 import { fetchProducts } from '../../services/api';
 
@@ -12,13 +12,22 @@ const Showcase = () => {
 
 	const dispatch = useDispatch();
 
-	const {products, setProducts} = useSelector(state => state);
-	console.log(products);
+	const{ products } = useSelector(store => store);
 
-	useEffect(() => {		
-		dispatch(getProducts());
+	useEffect(() => {
+		async function getProducts() {
+			dispatch(fetchProductsPending());
+			try {
+				const data = await fetchProducts();
+				dispatch(fetchProductsSuccess(data));
+			}
+			catch (err) {
+				dispatch(fetchProductsError(err));
+			}
+		}
+		getProducts();			
 	}
-	, [dispatch]);
+	, []);
 
 	return (
 		<section className="showcase">
@@ -29,9 +38,7 @@ const Showcase = () => {
 				<div className="products__grid">
 					{
 						products.length > 0 &&
-						products.map((product, index) => (
-							<Product key={index} data={product} />
-						))
+						products.map((product, index) => ( <Product key={index} data={product} />))
 					}
 				</div>
 			</div>

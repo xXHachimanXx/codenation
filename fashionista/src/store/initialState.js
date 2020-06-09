@@ -1,4 +1,5 @@
 export const INITIAL_STATE = {
-    product: 'ok redux',
-    products: []
+    pending: false,
+    products: [],
+    error: null
 };

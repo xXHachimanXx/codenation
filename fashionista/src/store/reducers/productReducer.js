@@ -1,47 +1,44 @@
 import {
-    getCatalog
-} from "../../services/api";
+  FETCH_PRODUCTS_PENDING,
+  FETCH_PRODUCTS_SUCCESS,
+  FETCH_PRODUCTS_ERROR,
+} from '../actions/actions';
 
 import { INITIAL_STATE } from "../initialState";
-import {FETCH_PRODUCTS_PENDING, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR} from '../actions/actions';
-
-const initialState = {
-    pending: false,
-    products: [],
-    error: null
-};
 
 export default function productsReducer(state = INITIAL_STATE, action) {
 
-    switch(action.type) {
-        case FETCH_PRODUCTS_PENDING: 
-            return {
-                ...state,
-                pending: true
-            }
-        case FETCH_PRODUCTS_SUCCESS:
-            return {
-                ...state,
-                pending: false,
-                products: action.payload
-            }
-        case FETCH_PRODUCTS_ERROR:
-            return {
-                ...state,
-                pending: false,
-                error: action.error
-            }
-        default: 
-            return state;
-    }
-}
+  switch (action.type) {
+    case FETCH_PRODUCTS_PENDING:
+      return {
+        ...state,
+        pending: true
+      }
+    case FETCH_PRODUCTS_SUCCESS:
+      console.log(state);
+      return {
+        ...state,
+        pending: false,
+        products: action.payload
+      }
+    case FETCH_PRODUCTS_ERROR:
+      return {
+        ...state,
+        pending: false,
+        error: action.payload
+      }
 
+    default:
+      return state;
+  }
+}
 export const getProducts = state => state.products;
 export const getProductsPending = state => state.pending;
 export const getProductsError = state => state.error;
 
 /**
+
  * [].reduce((obj, item) => {
- *  
+ *
  * }, {});
  */

@@ -1,12 +1,12 @@
-import React from 'react';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { INITIAL_STATE } from "./initialState";
 
 import reducer from "./reducers/productReducer";
 
-const middlewares = [thunk];
+//const combinedReducers = combineReducers({reducer});
+//const middlewares = [thunk];
 
-const store = createStore(reducer, INITIAL_STATE, applyMiddleware(...middlewares));
+const store = createStore(reducer, applyMiddleware(thunk));
 
 export default store;
