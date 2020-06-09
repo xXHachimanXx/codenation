@@ -5,8 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { getProducts } from '../../store/actions/productsActions';
 
-
-
 import './Showcase.css';
 
 const Showcase = () => {

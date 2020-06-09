@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 
 import CartProduct from '../../components/CartProduct/CartProduct';
 
+import { INITIAL_STATE } from '../../store/initialState';
+
 import "./Drawer.css";
 
-const Drawer = (visible, cartContext, searchContext, counter) => {  
+
+const Drawer = ({ visible, cartContext, searchContext, counter }) => {
+
+  useEffect(() => {
+    visible = INITIAL_STATE.drawer.visible;
+    cartContext = INITIAL_STATE.drawer.cartContext;
+    searchContext = INITIAL_STATE.drawer.searchContext;
+    counter = INITIAL_STATE.drawer.counter;    
+  }, []);
 
   return (
-    <div className={visible? "drawer" : ""}>
+    <div className={visible ? "drawer" : ""}>
       <header className="drawer__header">
         <div className="drawer__header__title">
           <div className="drawer__header__icons">
@@ -18,7 +28,7 @@ const Drawer = (visible, cartContext, searchContext, counter) => {
           </div>
 
           <div className="drawer__header__title__info">
-            {cartContext && !searchContext? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
+            {cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
           </div>
         </div>
         {
@@ -46,11 +56,18 @@ const Drawer = (visible, cartContext, searchContext, counter) => {
   );
 };
 
-const mapStateToProps = store => ({
-  visible: store.drawer.visible,
-  cartContext: store.drawer.cartContext,
-  searchContext: store.drawer.searchContext,
-  counter: store.drawer.counter,
-});
 
+const mapStateToProps = store => {
+  console.log("storeeeeee");
+  return {
+    drawer: {
+      visible: store.drawer.visible,
+      cartContext: store.drawer.cartContext,
+      searchContext: store.drawer.searchContext,
+      counter: store.drawer.counter,
+    }
+  };
+}
 export default connect(mapStateToProps)(Drawer);
+
+//export default Drawer;

@@ -4,7 +4,7 @@ export const INITIAL_STATE = {
     error: null,
     drawer: {
         visible: false,
-        cartContext: false,
+        cartContext: true,
         searchContext: false,
         counter: 0,
     }

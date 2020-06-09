@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import { openDrawerOnSearchContext } from "../../store/actions/drawerActions";
+
 import './Topbar.css';
 
 const Topbar = () => (
@@ -13,7 +15,7 @@ const Topbar = () => (
       </Link>
 
       <div className="topbar__group">
-        <button className="topbar__icon--search">
+        <button className="topbar__icon--search" onClick={() => openDrawerOnSearchContext }>
           <Link to="/">
             <i className="fa fa-search" aria-hidden="true"></i>
           </Link>

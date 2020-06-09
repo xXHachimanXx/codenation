@@ -29,7 +29,7 @@ const ProductDetails = () => {
       return;
     }
     let productAux = products.find((product) => product.code_color === code_color);
-    
+
     setProduct(productAux);
     var productString = JSON.stringify(productAux); //converter para salvar
     localStorage.setItem('@fashionista/product', productString);
@@ -69,7 +69,9 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <Drawer counter={testCounter} />
+      {
+        //<Drawer />
+      }
     </div>
   )
 }

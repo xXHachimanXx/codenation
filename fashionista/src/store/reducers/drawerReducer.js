@@ -1,13 +1,15 @@
 import {
   DRAWER_OPEN,
   DRAWER_CLOSE,
-  DRAWER_SET_CONTEXT
+  DRAWER_OPEN_CART_CONTEXT,
+  DRAWER_OPEN_SEARCH_CONTEXT
 } from '../actions/drawerActions';
 
 import {
   INITIAL_STATE
 } from "../initialState";
 
+// falta melhorias
 export default function drawerReducer(state = INITIAL_STATE, action) {
 
   switch (action.type) {
@@ -19,12 +21,17 @@ export default function drawerReducer(state = INITIAL_STATE, action) {
     case DRAWER_CLOSE:
       return {
         ...state,
-        drawer_context: 'closed'
+        drawer: { ...state.drawer, visible: action.payload }
       }
-    case DRAWER_SET_CONTEXT:
+    case DRAWER_OPEN_SEARCH_CONTEXT:
       return {
         ...state,
-        drawer_context: action.payload
+        drawer: { ...state.drawer, searchContext: action.payload, cartContext: !action.payload }
+      }
+    case DRAWER_OPEN_CART_CONTEXT:
+      return {
+        ...state,
+        drawer: { ...state.drawer, searchContext: !action.payload, cartContext: action.payload }
       }
     default:
       return state;
