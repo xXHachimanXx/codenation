@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import Product from '../../components/Product/Product';
+import Drawer from '../../containers/Drawer/Drawer';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { getProducts } from '../../store/actions/actions';
+import { getProducts } from '../../store/actions/productsActions';
 
 
 
@@ -12,12 +13,12 @@ const Showcase = () => {
 
 	const dispatch = useDispatch();
 
-	const { products } = useSelector(store => store);
+	const { products } = useSelector(state => state.productsReducer);
 
 	useEffect(() => {
 		if (products.length === 0)
 			getProducts(dispatch);
-	},[]);
+	}, []);
 
 	return (
 		<section className="showcase">
@@ -32,6 +33,7 @@ const Showcase = () => {
 					}
 				</div>
 			</div>
+
 		</section>
 	);
 }

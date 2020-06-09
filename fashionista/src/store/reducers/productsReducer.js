@@ -2,7 +2,7 @@ import {
   FETCH_PRODUCTS_PENDING,
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS_ERROR,
-} from '../actions/actions';
+} from '../actions/productsActions';
 
 import { INITIAL_STATE } from "../initialState";
 
@@ -15,7 +15,6 @@ export default function productsReducer(state = INITIAL_STATE, action) {
         pending: true
       }
     case FETCH_PRODUCTS_SUCCESS:
-      console.log(state);
       return {
         ...state,
         pending: false,
@@ -32,11 +31,11 @@ export default function productsReducer(state = INITIAL_STATE, action) {
       return state;
   }
 }
-export const getProducts = state => state.products;
-export const getProductsPending = state => state.pending;
-export const getProductsError = state => state.error;
 
 /**
+ export const getProducts = state => state.products;
+ export const getProductsPending = state => state.pending;
+ export const getProductsError = state => state.error;
 
  * [].reduce((obj, item) => {
  *

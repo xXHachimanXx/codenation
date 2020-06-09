@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 
 import { DEFAULT_PRODUCT_IMAGE } from "../../utils/constants";
-import { getProducts } from "../../store/actions/actions";
+import { getProducts } from "../../store/actions/productsActions";
 
 import Topbar from "../../containers/Topbar/Topbar";
 import SizeButton from "../../components/SizeButton/SizeButton";
