@@ -9,7 +9,7 @@ import Badge from "../Badge/Badge";
 
 const Product = ({ data }) => (
 	<div className="product__card">
-		<Link to="/">
+		<Link to={`/produto/${data.code_color}`}>
 			<figure className="product__image">
 				{data.discount_percentage && <Badge discount={data.discount_percentage} />}
 				<img
