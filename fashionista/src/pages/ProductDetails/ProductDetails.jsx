@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { closeDrawerAction } from "../../store/actions/drawerActions";
+import { getProducts } from "../../store/actions/productsActions";
 
 import SizeButton from "../../components/SizeButton/SizeButton";
 
@@ -23,6 +24,10 @@ const ProductDetails = () => {
 
     if (products.length === 0 || product === null) {
       var productJSON = localStorage.getItem('@fashionista/product');
+
+      // Se a store estiver vazia, faça uma nova requisição
+      if(productJSON === null) getProducts(dispatch);
+
       setProduct(JSON.parse(productJSON)); // convertendo para JSON
       return;
     }
