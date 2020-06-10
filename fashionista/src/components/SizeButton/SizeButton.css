@@ -1,6 +1,5 @@
 .sizeButton {
     position: relative;
-    cursor: pointer;
     font-weight: 600;
     padding: .8rem 1rem;
     border: .1rem solid #dfdfdf;
@@ -12,6 +11,23 @@
 }
 
 .sizeButton:hover {
+    background-color: #212529;   
+    box-shadow: 0 0.2rem 2rem 0 rgba(0, 0, 0, .5);
+    color: #fff;    
+    transition: all 0.4s ease 0s;
+    border: .1rem solid rgba(0, 0, 0, .5);
+}
+
+.onClick {
+    position: relative;
+    font-weight: 600;
+    padding: .8rem 1rem;
+    border: .1rem solid #dfdfdf;
+    margin-right: .8rem;
+    background: transparent;
+    outline: none;
+    border-radius: .5rem;
+    height: 100%;
     background-color: #212529;   
     box-shadow: 0 0.2rem 2rem 0 rgba(0, 0, 0, .5);
     color: #fff;    

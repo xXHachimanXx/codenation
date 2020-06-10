@@ -5,8 +5,6 @@ import { DEFAULT_PRODUCT_IMAGE } from "../../utils/constants";
 
 import './CartProduct.css';
 
-
-
 function CartProduct({ product, context = false }) {
   return (
     <div className="cart__product">

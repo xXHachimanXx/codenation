@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import "./SizeButton.css";
 
-const SizeButton = ({ size }) => (
-    <button className="sizeButton">
-        {size}
+const SizeButton = ({ size }) => {
+
+  // Temporario
+  const [clicked, setClicked] = useState(false);
+
+  return (
+    <>
+    <button
+      className={clicked ? "onClick" : "sizeButton"}
+      onClick={() => setClicked(!clicked)}
+    >
+      {size}
     </button>
-);
+    </>
+  );
+}
 
 export default SizeButton;

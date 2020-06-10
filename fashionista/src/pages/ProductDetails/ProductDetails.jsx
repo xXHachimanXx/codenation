@@ -39,6 +39,7 @@ const ProductDetails = () => {
 
   }, []);
 
+
   return (
     <div className="app__container">
       <div className="product__details">
