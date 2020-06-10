@@ -65,8 +65,8 @@ const Drawer = () => {
       <div className="drawer__content">
         <div className="drawer__product-list">
           {/*debug*/
-            cartContext ?
-              products.map(p => (
+            searchContext ?
+              searchedProducts.map(p => (
                 <CartProduct key={p.code_color} product={p} />
               ))
               :
