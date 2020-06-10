@@ -6,12 +6,10 @@ import {
 } from '../actions/drawerActions';
 
 export const INITIAL_STATE = {
-
   visible: false,
   cartContext: true,
   searchContext: false,
   counter: 0,
-
 };
 // falta melhorias
 export default function drawerReducer(state = INITIAL_STATE, action) {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { closeDrawerAction } from "../../store/actions/drawerActions";
 
 import SizeButton from "../../components/SizeButton/SizeButton";
 
@@ -10,17 +10,20 @@ import './ProductDetails.css';
 
 const ProductDetails = () => {
 
-  const { products } = useSelector(store => store.drawerReducer);
+  const { products } = useSelector(store => store.productsReducer);
+  const dispatch = useDispatch();
 
   const [product, setProduct] = useState({});
 
   const { code_color } = useParams();
 
   useEffect(() => {
+    // Fechar o drawer antes de tudo
+    dispatch(closeDrawerAction); 
+
     if (products.length === 0 || product === null) {
       var productJSON = localStorage.getItem('@fashionista/product');
       setProduct(JSON.parse(productJSON)); // convertendo para JSON
-      console.log(product);
       return;
     }
     let productAux = products.find((product) => product.code_color === code_color);
@@ -63,10 +66,7 @@ const ProductDetails = () => {
             </button>
           </div>
         </div>
-      </div>
-      {
-        //<Drawer />
-      }
+      </div>      
     </div>
   )
 }

@@ -35,50 +35,52 @@ const Drawer = () => {
   }
 
   return (
-    <div className={visible ? "drawer" : ""}>
-      <header className="drawer__header">
-        <div className="drawer__header__title">
-          <div className="drawer__header__icons">
-            <button className="drawer__header__button--back" onClick={() => closeDrawer(dispatch)}>
-              <i className="fas fa-arrow-left"></i>
-            </button>
+    visible && (
+      <div className="drawer">
+        <header className="drawer__header">
+          <div className="drawer__header__title">
+            <div className="drawer__header__icons">
+              <button className="drawer__header__button--back" onClick={() => closeDrawer(dispatch)}>
+                <i className="fas fa-arrow-left"></i>
+              </button>
+            </div>
+
+            <div className="drawer__header__title__info">
+              {cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
+            </div>
           </div>
 
-          <div className="drawer__header__title__info">
-            {cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
-          </div>
-        </div>
-        
-      </header>
+        </header>
 
-      <div className="drawer__content">
-      {
-          !cartContext && searchContext &&
-          <div className="drawer__search">
-            <input
-              className="drawer__search__input"
-              type="text"
-              placeholder="Buscar por produto..."
-              onChange={(event) => handleSearchProducts(event)}
-            />
+        <div className="drawer__content">
+          {
+            !cartContext && searchContext &&
+            <div className="drawer__search">
+              <input
+                className="drawer__search__input"
+                type="text"
+                placeholder="Buscar por produto..."
+                onChange={(event) => handleSearchProducts(event)}
+              />
+            </div>
+          }
+          <div className={searchContext ? "drawer__product-list search-context" : "drawer__product-list"}>
+            {/*debug*/
+              searchContext ?
+                searchedProducts.map(p => (
+                  <CartProduct key={p.code_color} product={p} />
+                ))
+                :
+                <span className="cart__empty">Sua sacola está vazia :\</span>
+            }
           </div>
-        }
-        <div className={searchContext? "drawer__product-list search-context" : "drawer__product-list"}>
-          {/*debug*/
-            searchContext ?
-              searchedProducts.map(p => (
-                <CartProduct key={p.code_color} product={p} />
-              ))
-              :
-              <span className="cart__empty">Sua sacola está vazia :\</span>
+          {
+            cartContext &&
+            <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
           }
         </div>
-        {
-          cartContext && 
-          <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
-        }
       </div>
-    </div>
+    )
   );
 };
 

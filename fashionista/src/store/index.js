@@ -1,4 +1,4 @@
-//import ReduxThunk from 'redux-thunk';
+import ReduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware, combineReducers } from "redux";
 
 import productsReducer from "./reducers/productsReducer";
@@ -9,6 +9,6 @@ const combinedReducers = combineReducers({
     drawerReducer
 });
 
-const store = createStore(combinedReducers);
+const store = createStore(combinedReducers, applyMiddleware(ReduxThunk));
 
 export default store;

@@ -13,6 +13,7 @@ const Showcase = () => {
   const { products } = useSelector(state => state.productsReducer);
 
   useEffect(() => {
+
     if (products.length === 0)
       getProducts(dispatch);
   }, []);
