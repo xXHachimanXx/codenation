@@ -49,7 +49,11 @@ const Drawer = () => {
             {console.log(store) && cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
           </div>
         </div>
-        {
+        
+      </header>
+
+      <div className="drawer__content">
+      {
           !cartContext && searchContext &&
           <div className="drawer__search">
             <input
@@ -60,10 +64,7 @@ const Drawer = () => {
             />
           </div>
         }
-      </header>
-
-      <div className="drawer__content">
-        <div className="drawer__product-list">
+        <div className={searchContext? "drawer__product-list search-context" : "drawer__product-list"}>
           {/*debug*/
             searchContext ?
               searchedProducts.map(p => (
