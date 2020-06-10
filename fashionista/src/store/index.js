@@ -1,6 +1,5 @@
-import thunk from 'redux-thunk';
+//import ReduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware, combineReducers } from "redux";
-import { INITIAL_STATE } from "./initialState";
 
 import productsReducer from "./reducers/productsReducer";
 import drawerReducer from "./reducers/drawerReducer";
@@ -10,6 +9,6 @@ const combinedReducers = combineReducers({
     drawerReducer
 });
 
-const store = createStore(combinedReducers, INITIAL_STATE, applyMiddleware(thunk));
+const store = createStore(combinedReducers);
 
 export default store;

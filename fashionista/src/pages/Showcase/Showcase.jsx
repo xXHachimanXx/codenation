@@ -35,4 +35,14 @@ const Showcase = () => {
   );
 }
 
+/*
+const mapStateToProps = state => {
+  const { products } = state;
+
+  return {
+    products: products
+  };
+}
+export default connect(mapStateToProps)(Showcase);
+*/
 export default Showcase;

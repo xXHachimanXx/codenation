@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect, useSelector, useDispatch } from "react-redux";
 import { closeDrawer } from "../../store/actions/drawerActions";
 
@@ -9,14 +9,31 @@ import "./Drawer.css";
 
 const Drawer = () => {
 
-  const { 
-    visible, 
-    cartContext, 
-    searchContext, 
-    counter 
-  } = useSelector(state => state.drawerReducer.drawer);
-
   const dispatch = useDispatch();
+
+  const store = useSelector(state => state.drawerReducer);
+  const { products } = useSelector(state => state.productsReducer);
+
+  const {
+    visible,
+    cartContext,
+    searchContext,
+    counter,
+  } = store;
+
+
+  const [searchedProducts, setSearchedProducts] = useState([]);
+
+  async function handleSearchProducts(event) {
+    event.preventDefault();
+
+    setSearchedProducts([]);
+    const searchText = event.target.value.toUpperCase();
+
+    const aux = await products.filter((p) => p.name.includes(searchText))
+    console.log(aux);
+    setSearchedProducts(aux);
+  }
 
   return (
     <div className={visible ? "drawer" : ""}>
@@ -29,13 +46,18 @@ const Drawer = () => {
           </div>
 
           <div className="drawer__header__title__info">
-            {cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
+            {console.log(store) && cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
           </div>
         </div>
         {
           !cartContext && searchContext &&
           <div className="drawer__search">
-            < input className="drawer__search__input" type="text" placeholder="Buscar por produto..." />
+            <input
+              className="drawer__search__input"
+              type="text"
+              placeholder="Buscar por produto..."
+              onChange={(event) => handleSearchProducts(event)}
+            />
           </div>
         }
       </header>
@@ -43,15 +65,15 @@ const Drawer = () => {
       <div className="drawer__content">
         <div className="drawer__product-list">
           {/*debug*/
-            cartContext &&
-            <CartProduct />
-            //<span class="cart__empty">Sua sacola está vazia :\</span>
+            cartContext ?
+              products.map(p => (
+                <CartProduct key={p.code_color} product={p} />
+              ))
+              :
+              <span className="cart__empty">Sua sacola está vazia :\</span>
           }
         </div>
-        {/*debug*/
-          //context === 'sacola' &&
-          <div className={visible ? "drawer__footer" : ""}><span>Subtotal - R$ 00,00</span></div>
-        }
+        <div className={visible ? "drawer__footer" : ""}><span>Subtotal - R$ 00,00</span></div>
       </div>
     </div>
   );

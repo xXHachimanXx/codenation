@@ -6,7 +6,7 @@ import { openSearch, openCart } from "../../store/actions/drawerActions";
 
 import './Topbar.css';
 
-const Topbar = () => {
+const Topbar = () => {  
   const dispatch = useDispatch();
   return (
     <header className="topbar" data-testid="topbar">

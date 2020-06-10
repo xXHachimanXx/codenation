@@ -16,7 +16,7 @@ export const fetchProductsPending = (pending) => ({
 });
 export const fetchProductsSuccess = (data) => ({
     type: FETCH_PRODUCTS_SUCCESS,
-    payload: data,
+    payload: [...data],
 });
 export const fetchProductsError = (error) => ({
     type: FETCH_PRODUCTS_ERROR,
@@ -27,9 +27,10 @@ export const getProducts = async (dispatch) => {
     dispatch(fetchProductsPending());
     try {
         const data = await fetchProducts();
+        console.log([...data])
         dispatch(fetchProductsSuccess(data));
-    }
-    catch (err) {
-        dispatch(fetchProductsError(err));
-    }
+}
+catch (err) {
+    dispatch(fetchProductsError(err));
+}
 }

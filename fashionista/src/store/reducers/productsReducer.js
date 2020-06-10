@@ -4,7 +4,11 @@ import {
   FETCH_PRODUCTS_ERROR,
 } from '../actions/productsActions';
 
-import { INITIAL_STATE } from "../initialState";
+export const INITIAL_STATE = {
+  pending: false,
+  products: [],
+  error: null,
+};
 
 export default function productsReducer(state = INITIAL_STATE, action) {
 
@@ -19,7 +23,7 @@ export default function productsReducer(state = INITIAL_STATE, action) {
         ...state,
         pending: false,
         products: action.payload
-      }
+      };
     case FETCH_PRODUCTS_ERROR:
       return {
         ...state,

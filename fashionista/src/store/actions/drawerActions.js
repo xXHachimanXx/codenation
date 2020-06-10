@@ -38,7 +38,7 @@ export const openSearch = async(dispatch) => {
     await dispatch(openDrawerOnSearchContext());
 }
 
-export const openCart = async(dispatch) => {
+export const openCart = async(dispatch) => {    
     await dispatch(openDrawerOnCartContext());
 }
 export const closeDrawer = async(dispatch) => {

@@ -4,7 +4,7 @@ import './CartProduct.css';
 
 
 
-function CartProduct() {
+function CartProduct({product}) {
   return (
     <div className="cart__product">
 
