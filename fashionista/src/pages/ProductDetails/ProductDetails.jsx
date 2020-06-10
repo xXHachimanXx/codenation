@@ -54,9 +54,12 @@ const ProductDetails = () => {
           </div>
 
           <div className="product__details__sizes">
-            <p>Escolha o tamanho</p>
+            <p>Escolha o tamanho:</p>
             <div className="product__details__btnGroup">
-              {<SizeButton size="PP" />}
+              {
+                product.sizes &&
+                product.sizes.map(s => <SizeButton key={s.size} size={s.size} />)
+              }
             </div>
           </div>
 
