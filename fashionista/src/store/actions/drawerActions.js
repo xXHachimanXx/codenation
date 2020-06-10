@@ -7,23 +7,23 @@ export const DRAWER_SET_CONTEXT = 'DRAWER_SET_CONTEXT';
 
 
 // Actions
-export const openDrawer = () => ({
+export const openDrawerAction = () => ({
     type: DRAWER_OPEN,
     payload: true
 });
 
-export const closeDrawer = () => ({
+export const closeDrawerAction = () => ({
     type: DRAWER_CLOSE,
     payload: false,
 });
 
 export const openDrawerOnCartContext = () => ({
-    type: DRAWER_CLOSE,
+    type: DRAWER_OPEN_CART_CONTEXT,
     payload: true,
 });
 
 export const openDrawerOnSearchContext = () => ({
-    type: DRAWER_CLOSE,
+    type: DRAWER_OPEN_SEARCH_CONTEXT,
     payload: true,
 });
 
@@ -32,3 +32,15 @@ export const setDrawerContext = (context) => ({
     type: DRAWER_SET_CONTEXT,
     payload: context
 });
+
+
+export const openSearch = async(dispatch) => {
+    await dispatch(openDrawerOnSearchContext());
+}
+
+export const openCart = async(dispatch) => {
+    await dispatch(openDrawerOnCartContext());
+}
+export const closeDrawer = async(dispatch) => {
+    await dispatch(closeDrawerAction());
+}

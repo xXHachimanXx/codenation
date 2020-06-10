@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
-import { DEFAULT_PRODUCT_IMAGE } from "../../utils/constants";
-import { getProducts } from "../../store/actions/productsActions";
 
-import Topbar from "../../containers/Topbar/Topbar";
 import SizeButton from "../../components/SizeButton/SizeButton";
-import Drawer from "../../containers/Drawer/Drawer";
 
 import './ProductDetails.css';
 
@@ -19,7 +15,6 @@ const ProductDetails = () => {
   const [product, setProduct] = useState({});
 
   const { code_color } = useParams();
-  const testCounter = 0; // Debug
 
   useEffect(() => {
     if (products.length === 0 || product === null) {

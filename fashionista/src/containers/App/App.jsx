@@ -15,25 +15,13 @@ import { Provider } from 'react-redux';
 import store from '../../store/index';
 
 function App() {
-  const { drawer } = INITIAL_STATE.drawer;
   return (
     <div className="App">
       <Provider store={store}>
         <BrowserRouter>
           <Topbar />
           <Routes />
-          {
-            console.log(store.getState)&&
-            <Drawer />
-            /*
-            <Drawer
-              visible={drawer.visible}
-              cartContext={drawer.cartContext}
-              searchContext={drawer.searchContext}
-              counter={drawer.counter}
-            />
-            */
-          }
+          <Drawer />
         </BrowserRouter>
       </Provider>
     </div>

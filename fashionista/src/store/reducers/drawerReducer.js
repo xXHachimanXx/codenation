@@ -11,29 +11,43 @@ import {
 
 // falta melhorias
 export default function drawerReducer(state = INITIAL_STATE, action) {
-
+  
   switch (action.type) {
     case DRAWER_OPEN:
       return {
         ...state,
         drawer_context: action.payload
       }
-    case DRAWER_CLOSE:
-      return {
-        ...state,
-        drawer: { ...state.drawer, visible: action.payload }
-      }
-    case DRAWER_OPEN_SEARCH_CONTEXT:
-      return {
-        ...state,
-        drawer: { ...state.drawer, searchContext: action.payload, cartContext: !action.payload }
-      }
-    case DRAWER_OPEN_CART_CONTEXT:
-      return {
-        ...state,
-        drawer: { ...state.drawer, searchContext: !action.payload, cartContext: action.payload }
-      }
-    default:
-      return state;
+      case DRAWER_CLOSE:
+        return {
+          ...state,
+          drawer: {
+            ...state.drawer,
+            visible: action.payload
+          }
+        }
+        case DRAWER_OPEN_SEARCH_CONTEXT:
+          console.log("jaiohisugdug");
+          return {
+            ...state,
+            drawer: {
+              ...state.drawer,
+              visible: action.payload,
+              searchContext: action.payload,
+              cartContext: !action.payload
+            }
+          }
+          case DRAWER_OPEN_CART_CONTEXT:            
+          return {
+            ...state,
+            drawer: {
+              ...state.drawer,
+                visible: action.payload,
+                searchContext: !action.payload,
+                cartContext: action.payload
+              }
+            }
+            default:
+              return state;
   }
 }

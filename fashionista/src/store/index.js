@@ -10,6 +10,6 @@ const combinedReducers = combineReducers({
     drawerReducer
 });
 
-const store = createStore(combinedReducers, INITIAL_STATE);
+const store = createStore(combinedReducers, INITIAL_STATE, applyMiddleware(thunk));
 
 export default store;

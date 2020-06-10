@@ -1,28 +1,29 @@
 import React, { useEffect } from 'react';
-import { connect } from "react-redux";
+import { connect, useSelector, useDispatch } from "react-redux";
+import { closeDrawer } from "../../store/actions/drawerActions";
 
 import CartProduct from '../../components/CartProduct/CartProduct';
-
-import { INITIAL_STATE } from '../../store/initialState';
 
 import "./Drawer.css";
 
 
-const Drawer = ({ visible, cartContext, searchContext, counter }) => {
+const Drawer = () => {
 
-  useEffect(() => {
-    visible = INITIAL_STATE.drawer.visible;
-    cartContext = INITIAL_STATE.drawer.cartContext;
-    searchContext = INITIAL_STATE.drawer.searchContext;
-    counter = INITIAL_STATE.drawer.counter;    
-  }, []);
+  const { 
+    visible, 
+    cartContext, 
+    searchContext, 
+    counter 
+  } = useSelector(state => state.drawerReducer.drawer);
+
+  const dispatch = useDispatch();
 
   return (
     <div className={visible ? "drawer" : ""}>
       <header className="drawer__header">
         <div className="drawer__header__title">
           <div className="drawer__header__icons">
-            <button className="drawer__header__button--back">
+            <button className="drawer__header__button--back" onClick={() => closeDrawer(dispatch)}>
               <i className="fas fa-arrow-left"></i>
             </button>
           </div>
@@ -49,25 +50,27 @@ const Drawer = ({ visible, cartContext, searchContext, counter }) => {
         </div>
         {/*debug*/
           //context === 'sacola' &&
-          <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
+          <div className={visible ? "drawer__footer" : ""}><span>Subtotal - R$ 00,00</span></div>
         }
       </div>
     </div>
   );
 };
 
+/*
+const mapStateToProps = state => {
+  const { drawer } = state;
 
-const mapStateToProps = store => {
-  console.log("storeeeeee");
   return {
     drawer: {
-      visible: store.drawer.visible,
-      cartContext: store.drawer.cartContext,
-      searchContext: store.drawer.searchContext,
-      counter: store.drawer.counter,
+      visible: state.drawerReducer.drawer.visible,
+      cartContext: state.drawerReducer.drawer.cartContext,
+      searchContext: state.drawerReducer.drawer.searchContext,
+      counter: state.drawerReducer.drawer.counter,
     }
   };
 }
 export default connect(mapStateToProps)(Drawer);
+*/
 
-//export default Drawer;
+export default Drawer;
