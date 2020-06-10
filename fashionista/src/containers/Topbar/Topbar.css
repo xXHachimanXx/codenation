@@ -29,33 +29,33 @@
   justify-content: flex-end;
   align-items: center;
   font-weight: normal;
-  font-size: large;
 }
 
-.topbar__group i{
+.topbar__group i {
   color: black;
-  font-size: 20px;
+  font-size: 23px;
   margin-right: 10px;
   margin: 10px;
   height: 100%;
   border-radius: 100%;
 }
 
-.topbar .topbar__icon--cart,  .topbar .topbar__icon--search {
-    cursor: pointer;
-    margin-right: 1rem;
-    background: transparent;
-    border-radius: 100%;
-    border: none;
-    box-shadow: none;
-    font-size: 1.6rem;
-    line-height: 0;
-    outline: none;
-    padding: 0;
-    position: relative;
+.topbar .topbar__icon--cart,
+.topbar .topbar__icon--search {
+  cursor: pointer;
+  margin-right: 1rem;
+  background: transparent;
+  border-radius: 100%;
+  border: none;
+  box-shadow: none;
+  font-size: 1.6rem;
+  line-height: 0;
+  outline: none;
+  padding: 0;
+  position: relative;
 }
 
-.counter {
+.topbar__icon--cart i sup {
   background: #cf1111;
   color: white;
   height: auto;
@@ -68,5 +68,5 @@
   line-height: 1.5rem;
   text-align: center;
   font-size: 1.1rem;
-  font-weight: 700;  
+  font-weight: 700;
 }
