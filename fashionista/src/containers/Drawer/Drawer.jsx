@@ -30,8 +30,7 @@ const Drawer = () => {
     setSearchedProducts([]);
     const searchText = event.target.value.toUpperCase();
 
-    const aux = await products.filter((p) => p.name.includes(searchText))
-    console.log(aux);
+    const aux = await products.filter((p) => p.name.includes(searchText));
     setSearchedProducts(aux);
   }
 
@@ -46,7 +45,7 @@ const Drawer = () => {
           </div>
 
           <div className="drawer__header__title__info">
-            {console.log(store) && cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
+            {cartContext && !searchContext ? <span>{`Sacola (${counter})`}</span> : <span>{"Buscar Produtos"}</span>}
           </div>
         </div>
         
@@ -74,7 +73,10 @@ const Drawer = () => {
               <span className="cart__empty">Sua sacola está vazia :\</span>
           }
         </div>
-        <div className={visible ? "drawer__footer" : ""}><span>Subtotal - R$ 00,00</span></div>
+        {
+          cartContext && 
+          <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
+        }
       </div>
     </div>
   );
