@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { closeDrawerAction, setSearchedProducts } from "../../store/actions/drawerActions";
+import { getProducts } from "../../store/actions/productsActions";
+
 
 import CartProduct from '../../components/CartProduct/CartProduct';
 
@@ -26,8 +28,10 @@ const Drawer = () => {
 
   async function handleSearchProducts(event) {
     event.preventDefault();
-
     const searchText = await event.target.value.toUpperCase();
+
+    if(products.length === 0) await getProducts(dispatch);
+
     const aux = await products.filter((p) => p.name.includes(searchText));
 
     await dispatch(setSearchedProducts(aux));

@@ -1,43 +1,40 @@
 import {
-  FETCH_PRODUCTS_PENDING,
-  FETCH_PRODUCTS_SUCCESS,
-  FETCH_PRODUCTS_ERROR,
-} from '../actions/productsActions';
+  SET_PRODUCT_TO_BUY,
+  SET_SIZE_PRODUCT_TO_BUY
+} from '../actions/productActions';
 
 export const INITIAL_STATE = {
-  
-  name: "VESTIDO FRANZIDO RECORTES",
-  style: "20001609",
-  code_color: "20001609_029",
-  color_slug: "preto",
-  color: '',
-  on_sale: true,
-  regular_price: '',
-  actual_price: '',
-  discount_percentage: '',
-  installments: '',
-  iamge: '',
+  product_info: {
+    name: '',
+    style: '',
+    code_color: '',
+    color_slug: '',
+    color: '',
+    on_sale: true,
+    regular_price: '',
+    actual_price: '',
+    discount_percentage: '',
+    installments: '',
+    image: '',
+    size: ''
+  },
+  quantity: 0,
+
 };
 
 export default function productsReducer(state = INITIAL_STATE, action) {
 
   switch (action.type) {
-    case FETCH_PRODUCTS_PENDING:
+    case SET_PRODUCT_TO_BUY:
       return {
         ...state,
-        pending: true
+        product_info: action.payload,
+        quantity: 1
       }
-    case FETCH_PRODUCTS_SUCCESS:
+    case SET_SIZE_PRODUCT_TO_BUY:
       return {
         ...state,
-        pending: false,
-        products: action.payload
-      };
-    case FETCH_PRODUCTS_ERROR:
-      return {
-        ...state,
-        pending: false,
-        error: action.payload
+        product_info: {...state.product, size: action.payload}
       }
 
     default:

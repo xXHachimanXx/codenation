@@ -5,8 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { closeDrawerAction } from "../../store/actions/drawerActions";
 import { getProducts } from "../../store/actions/productsActions";
 import { addProductToCart } from "../../store/actions/cartActions";
-
-import SizeButton from "../../components/SizeButton/SizeButton";
+import { setProductToBuy, setSizeProductToBuy } from "../../store/actions/productActions";
 
 import './ProductDetails.css';
 
@@ -14,36 +13,50 @@ import './ProductDetails.css';
 const ProductDetails = () => {
 
   const { products } = useSelector(store => store.productsReducer);
+  const productDetails = useSelector(state => state.productReducer);
+  const product = productDetails.product_info;
+
   const dispatch = useDispatch();
-
-  const [product, setProduct] = useState({});
-  const [productSize, setProductSize] = useState('');
-
   const { code_color } = useParams();
 
-  useEffect(() => {
-    // Fechar o drawer antes de tudo
-    dispatch(closeDrawerAction);
+  const productSize = product.size || 'U';
 
-    if (products.length === 0 || product === null) {
+
+  useEffect(() => {
+
+    async function init() {
+      // Fechar o drawer antes de tudo
+      await dispatch(closeDrawerAction);
+
       var productJSON = localStorage.getItem('@fashionista/product');
 
-      // Se a store estiver vazia, faça uma nova requisição
-      if (productJSON === null) 
-        getProducts(dispatch);        
+      if (productJSON === null) {
+        // Se a store estiver vazia, faça uma nova requisição
+        if (products.length === 0) {
+          await getProducts(dispatch);
+        }
 
-      setProduct(JSON.parse(productJSON)); // convertendo para JSON
+        const productAux = await products.find((p) => p.code_color === code_color);
 
-      return;
+        await dispatch(setProductToBuy(productAux));
+
+        var productString = JSON.stringify(productAux); //converter para salvar
+        console.log("string" + productString);
+        localStorage.setItem('@fashionista/product', productString); // armazenar
+
+        return;
+      }
+      else {
+        productJSON = JSON.parse(productJSON); // string to json
+        await dispatch(setProductToBuy(productJSON));
+      }
+
+      await dispatch(setProductToBuy(productJSON));
+
     }
-    let productAux = products.find((product) => product.code_color === code_color);
-
-    setProduct(productAux);
-    var productString = JSON.stringify(productAux); //converter para salvar
-    localStorage.setItem('@fashionista/product', productString);
-
+    init();
   }, []);
-  
+
   function handleAddProductToCart() {
     var stringProduct = JSON.stringify(product);
 
@@ -87,7 +100,7 @@ const ProductDetails = () => {
                 product.sizes.map((s, index) =>
                   <button
                     key={index}
-                    onClick={() => setProductSize(s.size)}
+                    onClick={() => dispatch(setSizeProductToBuy(s.size))}
                     className={`${productSize === s.size ? 'onClick' : 'sizeButton'}`}
                   >
                     {s.size}

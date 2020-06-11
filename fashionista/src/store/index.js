@@ -4,11 +4,14 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import productsReducer from "./reducers/productsReducer";
 import drawerReducer from "./reducers/drawerReducer";
 import cartReducer from "./reducers/cartReducer";
+import productReducer from "./reducers/productReducer";
+
 
 const combinedReducers = combineReducers({
     productsReducer, 
     drawerReducer,
-    cartReducer
+    cartReducer,
+    productReducer
 });
 
 const store = createStore(combinedReducers, applyMiddleware(ReduxThunk));

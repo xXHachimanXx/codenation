@@ -29,8 +29,7 @@ export const getProducts = async (dispatch) => {
         const data = await fetchProducts();
         console.log([...data])
         dispatch(fetchProductsSuccess(data));
-}
-catch (err) {
-    dispatch(fetchProductsError(err));
-}
+    } catch (err) {
+        dispatch(fetchProductsError(err));
+    }
 }
