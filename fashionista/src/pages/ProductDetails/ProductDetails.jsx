@@ -49,10 +49,10 @@ const ProductDetails = () => {
     stringProduct = stringProduct
       .replace('\s*\"sizes\" *: *(\"(.*?)\"(,|\s|)|\s*\{(.*?)\}(,|\s|))');
 
-    const cartProduct = (JSON.parse(stringProduct));
+    var cartProduct = (JSON.parse(stringProduct));
 
     // adicionar novo campo 'size'
-    cartProduct = { ...cartProduct, size: productSize };
+    cartProduct = { ...cartProduct, size: productSize, quantity: 0 };
 
     dispatch(addProductToCart(cartProduct));
   }
@@ -96,7 +96,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="product__details__actions">
-            <button className="product__details__addToCart">
+            <button className="product__details__addToCart" onClick={() => handleAddProductToCart()}>
               Adicionar ao carrinho
             </button>
           </div>

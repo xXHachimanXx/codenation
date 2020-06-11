@@ -13,6 +13,7 @@ const Drawer = () => {
 
   const store = useSelector(state => state.drawerReducer);
   const { products } = useSelector(state => state.productsReducer);
+  const { cart } = useSelector(state => state.cartReducer);
 
   const {
     visible,
@@ -63,16 +64,25 @@ const Drawer = () => {
             />
           </div>
         }
-        <div className={searchContext ? "drawer__product-list search-context" : "drawer__product-list"}>
-          {/*debug*/
-            searchContext ?
-              searchedProducts.map(p => (
-                <CartProduct key={p.code_color} product={p} />
-              ))
-              :
-              <span className="cart__empty">Sua sacola está vazia :\</span>
-          }
-        </div>
+        {
+          searchContext ?
+            <div className="drawer__product-list search-context">
+              {
+                searchedProducts.map(p => (
+                  <CartProduct key={p.code_color} product={p} />
+                ))
+              }
+            </div>
+            :
+            <div className="drawer__product-list">
+              {
+                cart?
+                cart.map((p, index) => <CartProduct key={index} product={p} context={cartContext}/>)
+                :
+                <span className="cart__empty">Sua sacola está vazia :\</span>
+              }
+            </div>
+        }
         {
           cartContext &&
           <div className="drawer__footer"><span>Subtotal - R$ 00,00</span></div>
