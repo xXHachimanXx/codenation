@@ -7,7 +7,9 @@ import {
 } from '../actions/cartActions';
 
 export const INITIAL_STATE = {
-  cart: []
+  cart: [],
+  total_value: 0.0,
+  
 };
 
 // falta melhorias

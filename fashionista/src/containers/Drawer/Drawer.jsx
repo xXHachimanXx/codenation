@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { connect, useSelector, useDispatch } from "react-redux";
-import { closeDrawer } from "../../store/actions/drawerActions";
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { closeDrawerAction, setSearchedProducts } from "../../store/actions/drawerActions";
 
 import CartProduct from '../../components/CartProduct/CartProduct';
 
@@ -12,6 +12,8 @@ const Drawer = () => {
   const dispatch = useDispatch();
 
   const store = useSelector(state => state.drawerReducer);
+  const  searchedProducts  = store.searchedProducts;
+
   const { products } = useSelector(state => state.productsReducer);
   const { cart } = useSelector(state => state.cartReducer);
 
@@ -22,17 +24,13 @@ const Drawer = () => {
     counter,
   } = store;
 
-
-  const [searchedProducts, setSearchedProducts] = useState([]);
-
   async function handleSearchProducts(event) {
     event.preventDefault();
 
-    setSearchedProducts([]);
-    const searchText = event.target.value.toUpperCase();
-
+    const searchText = await event.target.value.toUpperCase();
     const aux = await products.filter((p) => p.name.includes(searchText));
-    setSearchedProducts(aux);
+
+    await dispatch(setSearchedProducts(aux));
   }
 
   return (
@@ -40,7 +38,7 @@ const Drawer = () => {
       <header className="drawer__header">
         <div className="drawer__header__title">
           <div className="drawer__header__icons">
-            <button className="drawer__header__button--back" onClick={() => closeDrawer(dispatch)}>
+            <button className="drawer__header__button--back" onClick={() => dispatch(closeDrawerAction())}>
               <i className="fas fa-arrow-left"></i>
             </button>
           </div>
@@ -76,10 +74,10 @@ const Drawer = () => {
             :
             <div className="drawer__product-list">
               {
-                cart?
-                cart.map((p, index) => <CartProduct key={index} product={p} context={cartContext}/>)
-                :
-                <span className="cart__empty">Sua sacola está vazia :\</span>
+                cart ?
+                  cart.map((p, index) => <CartProduct key={index} product={p} context={cartContext} />)
+                  :
+                  <span className="cart__empty">Sua sacola está vazia :\</span>
               }
             </div>
         }

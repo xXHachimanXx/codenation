@@ -29,9 +29,11 @@ const ProductDetails = () => {
       var productJSON = localStorage.getItem('@fashionista/product');
 
       // Se a store estiver vazia, faça uma nova requisição
-      if (productJSON === null) getProducts(dispatch);
+      if (productJSON === null) 
+        getProducts(dispatch);        
 
       setProduct(JSON.parse(productJSON)); // convertendo para JSON
+
       return;
     }
     let productAux = products.find((product) => product.code_color === code_color);
@@ -41,7 +43,7 @@ const ProductDetails = () => {
     localStorage.setItem('@fashionista/product', productString);
 
   }, []);
-
+  
   function handleAddProductToCart() {
     var stringProduct = JSON.stringify(product);
 
