@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+
 import { closeDrawerAction } from "../../store/actions/drawerActions";
 import { getProducts } from "../../store/actions/productsActions";
+import { addProductToCart } from "../../store/actions/cartActions";
 
 import SizeButton from "../../components/SizeButton/SizeButton";
 
@@ -15,18 +17,19 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   const [product, setProduct] = useState({});
+  const [productSize, setProductSize] = useState('');
 
   const { code_color } = useParams();
 
   useEffect(() => {
     // Fechar o drawer antes de tudo
-    dispatch(closeDrawerAction); 
+    dispatch(closeDrawerAction);
 
     if (products.length === 0 || product === null) {
       var productJSON = localStorage.getItem('@fashionista/product');
 
       // Se a store estiver vazia, faça uma nova requisição
-      if(productJSON === null) getProducts(dispatch);
+      if (productJSON === null) getProducts(dispatch);
 
       setProduct(JSON.parse(productJSON)); // convertendo para JSON
       return;
@@ -38,6 +41,21 @@ const ProductDetails = () => {
     localStorage.setItem('@fashionista/product', productString);
 
   }, []);
+
+  function handleAddProductToCart() {
+    var stringProduct = JSON.stringify(product);
+
+    // remover campo sizes
+    stringProduct = stringProduct
+      .replace('\s*\"sizes\" *: *(\"(.*?)\"(,|\s|)|\s*\{(.*?)\}(,|\s|))');
+
+    const cartProduct = (JSON.parse(stringProduct));
+
+    // adicionar novo campo 'size'
+    cartProduct = { ...cartProduct, size: productSize };
+
+    dispatch(addProductToCart(cartProduct));
+  }
 
 
   return (
@@ -64,7 +82,15 @@ const ProductDetails = () => {
             <div className="product__details__btnGroup">
               {
                 product.sizes &&
-                product.sizes.map(s => <SizeButton key={s.size} size={s.size} />)
+                product.sizes.map((s, index) =>
+                  <button
+                    key={index}
+                    onClick={() => setProductSize(s.size)}
+                    className={`${productSize === s.size ? 'onClick' : 'sizeButton'}`}
+                  >
+                    {s.size}
+                  </button>
+                )
               }
             </div>
           </div>
@@ -75,7 +101,7 @@ const ProductDetails = () => {
             </button>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
   )
 }
