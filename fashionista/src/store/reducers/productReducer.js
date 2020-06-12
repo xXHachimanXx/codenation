@@ -16,6 +16,7 @@ export const INITIAL_STATE = {
     discount_percentage: '',
     installments: '',
     image: '',
+    sizes: [],
     size: ''
   },
   quantity: 0,
@@ -34,7 +35,7 @@ export default function productsReducer(state = INITIAL_STATE, action) {
     case SET_SIZE_PRODUCT_TO_BUY:
       return {
         ...state,
-        product_info: {...state.product, size: action.payload}
+        product_info: {...state.product_info, size: action.payload}
       }
 
     default:

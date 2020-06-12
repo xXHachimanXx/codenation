@@ -15,6 +15,11 @@ export const removeCartProduct = (product_id) => ({
     type: REMOVE_PRODUCT,
     product_id: product_id,
 });
+export const increaseCartProductQuantity = (product_id) => ({
+    type: INCREASE_CART_PRODUCT_QUANTITY,
+    product_id: product_id,
+});
+
 /*
 export const fetchProductsError = (error) => ({
     type: FETCH_PRODUCTS_ERROR,

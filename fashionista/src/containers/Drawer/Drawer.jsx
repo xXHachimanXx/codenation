@@ -14,7 +14,7 @@ const Drawer = () => {
   const dispatch = useDispatch();
 
   const store = useSelector(state => state.drawerReducer);
-  const  searchedProducts  = store.searchedProducts;
+  const searchedProducts = store.searchedProducts;
 
   const { products } = useSelector(state => state.productsReducer);
   const { cart } = useSelector(state => state.cartReducer);
@@ -30,7 +30,7 @@ const Drawer = () => {
     event.preventDefault();
     const searchText = await event.target.value.toUpperCase();
 
-    if(products.length === 0) await getProducts(dispatch);
+    if (products.length === 0) await getProducts(dispatch);
 
     const aux = await products.filter((p) => p.name.includes(searchText));
 

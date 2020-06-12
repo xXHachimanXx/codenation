@@ -1,13 +1,18 @@
 import React from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
 import { DEFAULT_PRODUCT_IMAGE } from "../../utils/constants";
-import { removeCartProduct } from "../../store/actions/cartActions";
+import { removeCartProduct, increaseCartProductQuantity, } from "../../store/actions/cartActions";
 
 import './CartProduct.css';
 
 function CartProduct({ product, context = false }) {
+
+  const productDetails = useSelector(state => state.productReducer);
+  const { cart } = useSelector(state => state.cartReducer);
+
+  console.log("cart: " + productDetails.quantity)
   const dispatch = useDispatch();
 
   return (
@@ -29,7 +34,9 @@ function CartProduct({ product, context = false }) {
                   <button className="cart__product__icons" onClick={() => { --product.quantity }}>
                     <i className="fas fa-minus"></i>
                   </button>
-                  <div className="cart__product__input">{product.quantity}</div>
+                  <div className="cart__product__input">{
+                    cart.productDetails.quantity
+                  }</div>
                   <button className="cart__product__icons" onClick={() => { ++product.quantity }}>
                     <i className="fas fa-plus"></i>
                   </button>

@@ -9,67 +9,67 @@ import { setProductToBuy, setSizeProductToBuy } from "../../store/actions/produc
 
 import './ProductDetails.css';
 
-
 const ProductDetails = () => {
 
   const { products } = useSelector(store => store.productsReducer);
   const productDetails = useSelector(state => state.productReducer);
-  const product = productDetails.product_info;
 
   const dispatch = useDispatch();
   const { code_color } = useParams();
 
-  const productSize = product.size || 'U';
+  const product = productDetails.product_info === null ?
+    getProductFromLocalStorage() :
+    productDetails.product_info;
+
+  const productSize = product === null ? 'U' : product.size;
 
 
   useEffect(() => {
 
     async function init() {
       // Fechar o drawer antes de tudo
-      await dispatch(closeDrawerAction);
+      if (products.length === 0 || product === null) {
+        var productJSON = localStorage.getItem('@fashionista/product');
 
-      var productJSON = localStorage.getItem('@fashionista/product');
-
-      if (productJSON === null) {
         // Se a store estiver vazia, faça uma nova requisição
-        if (products.length === 0) {
-          await getProducts(dispatch);
-        }
+        if (productJSON === null) getProducts(dispatch);
 
-        const productAux = await products.find((p) => p.code_color === code_color);
-
-        await dispatch(setProductToBuy(productAux));
-
-        var productString = JSON.stringify(productAux); //converter para salvar
-        console.log("string" + productString);
-        localStorage.setItem('@fashionista/product', productString); // armazenar
-
+        dispatch(setProductToBuy(JSON.parse(productJSON))); // convertendo para JSON
         return;
       }
-      else {
-        productJSON = JSON.parse(productJSON); // string to json
-        await dispatch(setProductToBuy(productJSON));
-      }
+      let productAux = products.find((product) => product.code_color === code_color);
 
-      await dispatch(setProductToBuy(productJSON));
+      dispatch(setProductToBuy(productAux));
+      var productString = JSON.stringify(productAux); //converter para salvar
+      localStorage.setItem('@fashionista/product', productString);
 
     }
     init();
   }, []);
 
-  function handleAddProductToCart() {
-    var stringProduct = JSON.stringify(product);
+  async function getProductFromLocalStorage() {
+    var productJSON = localStorage.getItem('@fashionista/product');
 
-    // remover campo sizes
-    stringProduct = stringProduct
-      .replace('\s*\"sizes\" *: *(\"(.*?)\"(,|\s|)|\s*\{(.*?)\}(,|\s|))');
+    if (productJSON === null) {
 
-    var cartProduct = (JSON.parse(stringProduct));
+      await getProducts(dispatch);
+
+      productJSON = await products.find((p) => p.code_color === code_color);
+
+      var productString = JSON.stringify(productJSON); //converter para salvar
+      localStorage.setItem('@fashionista/product', productString); // armazenar
+    }
+
+    return productJSON;
+  }
+
+
+  async function handleAddProductToCart() {
 
     // adicionar novo campo 'size'
-    cartProduct = { ...cartProduct, size: productSize, quantity: 0 };
-
-    dispatch(addProductToCart(cartProduct));
+    console.log(product)
+    await dispatch(setProductToBuy(product));
+    await dispatch(addProductToCart(product));
   }
 
 

@@ -13,10 +13,10 @@ export const INITIAL_STATE = {
 };
 
 // falta melhorias
-export default function drawerReducer(state = INITIAL_STATE, action) {
+export default function cartReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
 
-    case ADD_PRODUCT:
+    case ADD_PRODUCT:      
       return {
         ...state,
         cart: [...state.cart, action.data]
